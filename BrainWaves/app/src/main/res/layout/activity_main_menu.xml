@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bignerdranch.android.brainwaves.MainMenuActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="175dp"
+        android:layout_marginTop="25dp"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/app_name"
+        android:textAllCaps="false"
+        android:textColor="@android:color/black"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/daily_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <Button
+        android:id="@+id/play_button"
+        android:layout_width="329dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="55dp"
+        android:text="@string/play"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_button" />
+
+    <Button
+        android:id="@+id/list_of_games_button"
+        android:layout_width="160dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginStart="196dp"
+        android:text="@string/games"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daily_button"
+        app:layout_constraintVertical_bias="0.917" />
+
+    <Button
+        android:id="@+id/daily_button"
+        android:layout_width="329dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/daily"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/profile_button"
+        android:layout_width="160dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginStart="16dp"
+        android:text="@string/profile"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/daily_button"
+        app:layout_constraintVertical_bias="0.917" />
+
+</android.support.constraint.ConstraintLayout>

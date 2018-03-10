@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">BrainWaves</string>
+    <string name="games">Games</string>
+    <string name="play">Play</string>
+    <string name="profile">Profile</string>
+    <string name="daily">Daily</string>
+    <string name="back_Button">Back</string>
+    //string for list of game page
+    <string name="title_activity_list_of_games">List of Games</string>
+    <string name="game1">Human Calculator</string>
+    <string name="game2">Game 2</string>
+    <string name="game3">Game 3</string>
+    <string name="game4">Game 4</string>
+    <string name="game5">Game 5</string>
+    <string name="game6">Game 6</string>
+    <string name="game7">Game 7</string>
+    <string name="game8">Game 8</string>
+    <string name="game9">Game 9</string>
+    <string name="game10">Game 10</string>
+    <string name="game11">Game 11</string>
+    <string name="game12">Game 12</string>
+    <string name="title_activity_game1">Human Calculater</string>
+    //Game 1: human calculator
+    <string name="solve">Solve:\n</string>
+    <string name="timer">Timer</string>
+    <string name="next">Next</string>
+    <string name="problem1"> 5 + 3 = </string>
+    <string name="problem2"> 5 * 3 = </string>
+
+
+</resources>

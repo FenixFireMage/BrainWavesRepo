@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bignerdranch.android.brainwaves.Game1Activity">
+    tools:context="com.bignerdranch.android.brainwaves.MathGame1Activity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -13,6 +13,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_game1" />
+    <include layout="@layout/content_math_game1" />
 
 </android.support.design.widget.CoordinatorLayout>

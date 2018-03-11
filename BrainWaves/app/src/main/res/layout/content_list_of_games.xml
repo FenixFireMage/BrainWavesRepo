@@ -81,6 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/game5"
+                android:textAllCaps="false"
                 android:textSize="25sp" />
 
             <Button

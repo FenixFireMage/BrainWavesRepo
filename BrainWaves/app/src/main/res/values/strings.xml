@@ -4,7 +4,6 @@
     <string name="play">Play</string>
     <string name="profile">Profile</string>
     <string name="daily">Daily</string>
-    <string name="back_Button">Back</string>
     //string for list of game page
     <string name="title_activity_list_of_games">List of Games</string>
     <string name="game1">Human Calculator</string>
@@ -29,6 +28,13 @@
     <string name="problem2"> 5 * 3 = </string>
     <string name="problem3"> 6 - 2 = </string>
     <string name="problem4"> 6 / 3 = </string>
+    //End of game page
+    <string name="title_activity_end_of_game">End of Game</string>
+    <string name="end_of_game">Times up!\n Your Score:\n</string>
+    <string name="back_Button">Home</string>
+    <string name="play_again">Play Again</string>
+    <string name="play_next">Play Next</string>
+    <string name="score">SCORE NEED</string>
 
 
 </resources>

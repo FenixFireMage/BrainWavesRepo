@@ -35,7 +35,7 @@ public class MathGame1Activity extends AppCompatActivity {
                 if(mCurrentIndex < mNumberOfQuestions) {
                     updateQuestion();
                 }else{
-                    Intent intent = new Intent(MathGame1Activity.this, EndOfGameActivity.class);
+                    Intent intent = new Intent(MathGame1Activity.this, EndOfMathGame1Activity.class);
                     startActivity(intent);
                 }
             }

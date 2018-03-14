@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.bignerdranch.android.brainwaves.EndOfGameActivity">
+    tools:context="com.bignerdranch.android.brainwaves.LogicGame1">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -13,6 +13,6 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_end_of_game" />
+    <include layout="@layout/content_logic_game1" />
 
 </android.support.design.widget.CoordinatorLayout>

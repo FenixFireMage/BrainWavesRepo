@@ -56,7 +56,7 @@
                 android:id="@+id/buttonGame2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/game2"
+                android:text="@string/logicGame1"
                 android:textAllCaps="false"
                 android:textSize="25sp" />
 

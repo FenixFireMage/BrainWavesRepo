@@ -28,10 +28,13 @@
     <string name="problem2"> 5 * 3 = </string>
     <string name="problem3"> 6 - 2 = </string>
     <string name="problem4"> 6 / 3 = </string>
-    //Game 2: not sure yet
+    //Game 2: Logic Game 1
     <string name="tap">tap</string>
     <string name="Rotate">\nRotate</string>
     <string name="logicGame1">Logic Game 1</string>
+    //Game 3: Fast Tap
+    <string name="speedText">Tap the screen when it changes color!</string>
+    <string name="fastTap">Fast Tap</string>
     //End of game page
     <string name="title_activity_end_of_game">End of Game</string>
     <string name="end_of_game">Times up!\n Your Score:\n</string>
@@ -40,6 +43,7 @@
     <string name="play_next">Play Next</string>
     <string name="score">SCORE NEED</string>
     <string name="title_activity_logic_game1">LogicGame1</string>
+    <string name="title_activity_speed_game1">SpeedGame1</string>
 
 
 </resources>

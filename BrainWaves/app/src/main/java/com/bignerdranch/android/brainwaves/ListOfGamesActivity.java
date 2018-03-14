@@ -9,6 +9,8 @@ import android.widget.Button;
 public class ListOfGamesActivity extends AppCompatActivity {
     private Button mMathGame1;
     private Button mLogicGame1;
+    private Button mSpeedGame1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,15 @@ public class ListOfGamesActivity extends AppCompatActivity {
             }
         });
 
+        mSpeedGame1= (Button) findViewById(R.id.buttonGame3);
+        mSpeedGame1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(ListOfGamesActivity.this, SpeedGame1.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

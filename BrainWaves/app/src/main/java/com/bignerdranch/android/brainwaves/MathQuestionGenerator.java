@@ -16,6 +16,7 @@ public class MathQuestionGenerator {
     private char operation;
     private int mFirst,mSecond;
     private int mLevel;
+    private int score =0;
 
     private int mNumberOfQuestions;
 
@@ -30,30 +31,23 @@ public class MathQuestionGenerator {
     }
     private void setQuestions(int numberOfQuestions){
         for(int i = 0; i < numberOfQuestions; i++) {
-            setFirst(generatorRandomNumber(mLevel + 1));
-            setSecond(generatorRandomNumber(mLevel + 1));
-            setOperation(generatorRandomNumber(operations.length));
+            this.mFirst = generatorRandomNumber(mLevel - 1) +2;
+            this.mSecond = generatorRandomNumber(mLevel -1 )+2;
+            this.operation = operations[generatorRandomNumber(operations.length)];
             setAnswer(i);
-            setQuestion(i);
+            this.questions[i] = this.mFirst +" "+ this.operation+" "+this.mSecond+" =";
         }
     }
-    public int getAnswer(int index){
-        return this.mAnswer[index];
+    public void checkAnswer(int index, int userInput){
+        if(this.mAnswer[index] == userInput){
+            this.score++;
+        }
+    }
+    public int getFinalScore(){
+        return this.score;
     }
     public String getQuestion( int index){
         return this.questions[index];
-    }
-    private void setFirst(int first){
-        this.mFirst = first;
-    }
-    private void setSecond(int second){
-        this.mSecond = second;
-    }
-    private void setOperation(int index){
-        this.operation = operations[index];
-    }
-    private void setQuestion(int index){
-        this.questions[index] = this.mFirst +" "+ this.operation+" "+this.mSecond+" =";
     }
     public void setAnswer(int index){
         switch (this.operation){
@@ -61,14 +55,14 @@ public class MathQuestionGenerator {
                 this.mAnswer[index] = mFirst + mSecond;
                 break;
             case '-':
-                this.mAnswer[index] = mFirst + mSecond;
+                this.mAnswer[index] = mFirst - mSecond;
                 break;
             case '*':
                 this.mAnswer[index] = mFirst * mSecond;
                 break;
             case '/':
                 if(this.mFirst % this.mSecond != 0){
-                    makeNumbersDivisable(this.mFirst, this.mSecond);
+                    makeNumbersDivisable(this.mSecond);
                 }
                 this.mAnswer[index] = mFirst/ mSecond;
                 break;
@@ -82,10 +76,9 @@ public class MathQuestionGenerator {
         int randomInt = random.nextInt(bound);
         return randomInt;
     }
-    private void makeNumbersDivisable(int firstValue, int secondValue){
+    private void makeNumbersDivisable(int secondValue){
         // figure out how to divide numbers
-        setFirst(6);
-        setSecond(2);
+        this.mFirst = secondValue*generatorRandomNumber(mLevel);
     }
 
 }

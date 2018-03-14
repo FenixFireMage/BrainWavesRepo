@@ -41,7 +41,7 @@
     <string name="back_Button">Home</string>
     <string name="play_again">Play Again</string>
     <string name="play_next">Play Next</string>
-    <string name="score">SCORE NEED</string>
+    <string name="score">SCORE NEEDED</string>
     <string name="title_activity_logic_game1">LogicGame1</string>
     <string name="title_activity_speed_game1">SpeedGame1</string>
 

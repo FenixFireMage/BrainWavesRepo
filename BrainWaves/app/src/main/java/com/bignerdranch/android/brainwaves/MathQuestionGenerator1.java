@@ -1,6 +1,11 @@
 package com.bignerdranch.android.brainwaves;
 
+import android.util.Log;
+import android.widget.Button;
+import android.widget.TextView;
 import java.util.Random;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * Created by Liz on 3/10/18.
@@ -14,7 +19,6 @@ public class MathQuestionGenerator1 {
     private int mFirst,mSecond;
     private int mLevel;
     private int score =0;
-
     private int mNumberOfQuestions;
 
 

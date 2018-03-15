@@ -3,7 +3,8 @@ package com.bignerdranch.android.brainwaves;
 import android.util.Log;
 
 import java.util.Random;
-
+import android.widget.Button;
+import android.widget.TextView;
 import static android.content.ContentValues.TAG;
 
 /**

@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.bignerdranch.android.brainwaves.MathGame1Activity"
-    tools:showIn="@layout/activity_math_game0">
+    tools:context="com.bignerdranch.android.brainwaves.MathGame2Activity"
+    tools:showIn="@layout/activity_math_game2">
 
     <TextView
         android:id="@+id/textView3"

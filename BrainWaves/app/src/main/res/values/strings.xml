@@ -19,7 +19,7 @@
     <string name="game11">Game 11</string>
     <string name="game12">Game 12</string>
     <string name="title_activity_game1">Human Calculater</string>
-    //Game 1: human calculator
+    //Math Games
     <string name="solve">Solve:\n</string>
     <string name="start">Start</string>
     <string name="timer">Timer</string>
@@ -28,6 +28,7 @@
     <string name="problem2"> 5 * 3 = </string>
     <string name="problem3"> 6 - 2 = </string>
     <string name="problem4"> 6 / 3 = </string>
+    //End of math games page
     //Game 2: Logic Game 1
     <string name="tap">tap</string>
     <string name="Rotate">\nRotate</string>

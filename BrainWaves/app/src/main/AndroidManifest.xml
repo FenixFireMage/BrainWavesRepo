@@ -21,11 +21,19 @@
             android:label="@string/title_activity_list_of_games"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".EndOfGameActivity"
+            android:label="@string/title_activity_end_of_game"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".MathGame1Activity"
             android:label="@string/title_activity_game1"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EndOfMathGame1Activity"
+            android:label="@string/title_activity_end_of_game"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EndOfMathGame2Activity"
             android:label="@string/title_activity_end_of_game"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

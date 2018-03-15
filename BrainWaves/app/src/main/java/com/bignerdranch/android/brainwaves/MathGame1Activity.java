@@ -21,7 +21,7 @@ public class MathGame1Activity extends AppCompatActivity {
         @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_math_game0);
+        setContentView(R.layout.activity_math_game1);
 
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
         updateQuestion();
@@ -35,7 +35,7 @@ public class MathGame1Activity extends AppCompatActivity {
                 if(mCurrentIndex < mNumberOfQuestions) {
                     updateQuestion();
                 }else{
-                    Intent intent = new Intent(MathGame1Activity.this, EndOfGameActivity.class);
+                    Intent intent = new Intent(MathGame1Activity.this, EndOfMathGame1Activity.class);
                     startActivity(intent);
                 }
             }

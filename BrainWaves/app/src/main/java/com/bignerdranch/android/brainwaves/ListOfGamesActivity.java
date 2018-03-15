@@ -8,6 +8,7 @@ import android.widget.Button;
 
 public class ListOfGamesActivity extends AppCompatActivity {
     private Button mMathGame1;
+    private Button mMathGame2;
     private Button mLogicGame1;
     private Button mSpeedGame1;
 
@@ -27,7 +28,16 @@ public class ListOfGamesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mLogicGame1= (Button) findViewById(R.id.buttonGame2);
+        mMathGame2= (Button) findViewById(R.id.buttonGame2);
+        mMathGame2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(ListOfGamesActivity.this, MathGame2Activity.class);
+                startActivity(intent);
+            }
+        });
+        mLogicGame1= (Button) findViewById(R.id.buttonGame3);
         mLogicGame1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +47,7 @@ public class ListOfGamesActivity extends AppCompatActivity {
             }
         });
 
-        mSpeedGame1= (Button) findViewById(R.id.buttonGame3);
+        mSpeedGame1= (Button) findViewById(R.id.buttonGame4);
         mSpeedGame1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

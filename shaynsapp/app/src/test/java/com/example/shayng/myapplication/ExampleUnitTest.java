@@ -1,4 +1,4 @@
-package com.example.shayngarron759.myapplication;
+package com.example.shayng.myapplication;
 
 import org.junit.Test;
 

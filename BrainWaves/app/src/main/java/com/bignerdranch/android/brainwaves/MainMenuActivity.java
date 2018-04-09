@@ -29,5 +29,32 @@ public class MainMenuActivity extends Activity {
                 startActivity(intent);
             }
         });
+        mPlay = (Button) findViewById(R.id.play_button);
+        mPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
+                startActivity(intent);
+            }
+        });
+        mDaily = (Button) findViewById(R.id.daily_button);
+        mDaily.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
+                startActivity(intent);
+            }
+        });
+        mProfile = (Button) findViewById(R.id.profile_button);
+        mProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(MainMenuActivity.this, Profile.class);
+                startActivity(intent);
+            }
+        });
     }
 }

@@ -51,6 +51,10 @@
         <activity
             android:name=".SpeedGame1"
             android:label="@string/title_activity_speed_game1"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Profile"
+            android:label="@string/title_activity_profile"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

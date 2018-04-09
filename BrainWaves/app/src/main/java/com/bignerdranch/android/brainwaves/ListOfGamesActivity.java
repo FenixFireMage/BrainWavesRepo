@@ -11,6 +11,7 @@ public class ListOfGamesActivity extends AppCompatActivity {
     private Button mMathGame2;
     private Button mLogicGame1;
     private Button mSpeedGame1;
+    private Button mSpeedGame2;
 
 
     @Override
@@ -53,6 +54,15 @@ public class ListOfGamesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Start ListOfGamesActivity
                 Intent intent = new Intent(ListOfGamesActivity.this, SpeedGame1.class);
+                startActivity(intent);
+            }
+        });
+        mSpeedGame2= (Button) findViewById(R.id.buttonGame5);
+        mSpeedGame2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(ListOfGamesActivity.this, ReactionGame1.class);
                 startActivity(intent);
             }
         });

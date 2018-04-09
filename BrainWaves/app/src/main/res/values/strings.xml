@@ -10,7 +10,7 @@
     <string name="game2">Math Game 2</string>
     <string name="game3">Logic Game 1</string>
     <string name="game4">Fast Tap</string>
-    <string name="game5">Game 5</string>
+    <string name="game5">Reaction</string>
     <string name="game6">Game 6</string>
     <string name="game7">Game 7</string>
     <string name="game8">Game 8</string>
@@ -45,6 +45,7 @@
     <string name="score">SCORE NEEDED</string>
     <string name="title_activity_logic_game1">LogicGame1</string>
     <string name="title_activity_speed_game1">SpeedGame1</string>
+    <string name="title_activity_reaction_game1">ReactionGame1</string>
 
 
 </resources>

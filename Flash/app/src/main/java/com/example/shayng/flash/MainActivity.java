@@ -23,26 +23,34 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        final TextView currScore = findViewById(R.id.score);
+
         final TextView TextField = findViewById(R.id.textView);
-
-
+        TextView CurrScore = findViewById(R.id.score);
+        //CurrScore.setText("SCORE: " + 0);
         new CountDownTimer(30000, 1000) {
 
             public void onTick(long millisUntilFinished) {
                 int timeLeft = (int)millisUntilFinished / 1000;
                 TextField.setText("Seconds remaining: " + timeLeft);
-                currScore.setText("SCORE: " + score);
 
-                if(!isRed)
-                {
-                    setActivityBackgroundColor(0x08ffffff);
-                    if(rand.nextBoolean()) {
+
+               // if(!isRed)
+               // {
+                    //setActivityBackgroundColor(0xfff00000);
+                     if(rand.nextBoolean())
+                     {
                         isRed=true;
-                        setActivityBackgroundColor(0xfff00000);
+                        setActivityBackgroundColor(0xffffffff);
                     }
+                    else{
 
-                }
+                         setActivityBackgroundColor(0xfff00000);
+
+
+                     }
+
+
+             //  }
 
 
 
@@ -57,22 +65,24 @@ public class MainActivity extends AppCompatActivity {
         }.start();
     }
 
-    public void onClick(View view){
+    public void onFlash(View view){
 
-        if(isRed)
-        {
-            isRed=false;
-            setActivityBackgroundColor(0x08ffffff);
-            score+=100;
-        }
-        else
-        {
-            score-=100;
-        }
 
-        // Toast myToast = Toast.makeText(this, message, duration);
+       // CurrScore.setText("SCORE: " + 0);
+       // if(isRed)
+       // {
+           // isRed=false;
+        setActivityBackgroundColor(0xfff00000);
+           // score+=100;
+       // }
+       // else
+       // {
+           // score-=100;
+       // }
 
-    }
+
+
+   }
 
     public void setActivityBackgroundColor(int color) {
         View view = this.getWindow().getDecorView();

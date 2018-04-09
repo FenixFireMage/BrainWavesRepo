@@ -37,6 +37,11 @@
     <string name="speedText">Tap the screen when it changes color!</string>
     <string name="fastTap">Fast Tap</string>
     //End of game page
+    //Profile
+    <string name="yourName">Your Name</string>
+    <string name="brainLevel">Brain Level: 10</string>
+    <string name="age">Age: 21</string>
+    //End of Profile
     <string name="title_activity_end_of_game">End of Game</string>
     <string name="end_of_game">Times up!\n Your Score:\n</string>
     <string name="back_Button">Home</string>
@@ -46,6 +51,6 @@
     <string name="title_activity_logic_game1">LogicGame1</string>
     <string name="title_activity_speed_game1">SpeedGame1</string>
     <string name="title_activity_reaction_game1">ReactionGame1</string>
-
+    <string name="title_activity_profile">Profile</string>
 
 </resources>

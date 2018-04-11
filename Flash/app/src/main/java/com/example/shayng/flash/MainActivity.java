@@ -4,7 +4,6 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import java.util.concurrent.TimeUnit;
 import android.widget.TextView;
 import android.os.CountDownTimer;
 import java.util.Random;
@@ -14,16 +13,12 @@ public class MainActivity extends AppCompatActivity {
 
     boolean isRed = false;
     Random rand = new Random();
-    int score=0;
+    private int score=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-
 
         final TextView TimerField = findViewById(R.id.textView);
         final TextView CurrScore = findViewById(R.id.score);
@@ -43,23 +38,19 @@ public class MainActivity extends AppCompatActivity {
                         isRed=true;
                          setActivityBackgroundColor(Color.RED);
                     }
-                    else{
+                    else
+                     {
 
-                         if(rand.nextBoolean()) {
+                         if(rand.nextBoolean())
+                         {
                              setActivityBackgroundColor(0xffffff00);
                          }
                      }
-
-
                }
-
-
-
-                //here you can have your logic to set text to edittext
-
             }
 
             public void onFinish() {
+                isRed=false;
                 CurrScore.setText("FINAL SCORE:   " + score);
                 TimerField.setText("Game Over");
             }
@@ -68,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onFlash(View view){
-
-
 
         if(isRed)
         {
@@ -83,8 +72,6 @@ public class MainActivity extends AppCompatActivity {
         {
             score-=100;
         }
-
-
 
    }
 

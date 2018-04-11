@@ -51,11 +51,16 @@
         <activity
             android:name=".SpeedGame1"
             android:label="@string/title_activity_speed_game1"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity
             android:name=".Profile"
-            android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:label="@string/title_activity_speed_game1"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".SimonMainActivity" />
+        <activity android:name=".SimonAboutActivity" />
+        <activity android:name=".SimonHowToPlayActivity" />
+        <activity android:name=".SimonGameActivity" android:configChanges="keyboard|keyboardHidden|screenSize" />
     </application>
 
 </manifest>

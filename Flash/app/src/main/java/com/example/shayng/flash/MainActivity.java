@@ -4,7 +4,6 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import java.util.concurrent.TimeUnit;
 import android.widget.TextView;
 import android.os.CountDownTimer;
 import java.util.Random;
@@ -20,10 +19,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
-
-
 
         final TextView TimerField = findViewById(R.id.textView);
         final TextView CurrScore = findViewById(R.id.score);
@@ -43,23 +38,19 @@ public class MainActivity extends AppCompatActivity {
                         isRed=true;
                          setActivityBackgroundColor(Color.RED);
                     }
-                    else{
+                    else
+                     {
 
-                         if(rand.nextBoolean()) {
+                         if(rand.nextBoolean())
+                         {
                              setActivityBackgroundColor(0xffffff00);
                          }
                      }
-
-
                }
-
-
-
-                //here you can have your logic to set text to edittext
-
             }
 
             public void onFinish() {
+                isRed=false;
                 CurrScore.setText("FINAL SCORE:   " + score);
                 TimerField.setText("Game Over");
             }
@@ -81,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
    }
+<<<<<<< HEAD
 
     public int getScore() {
         return score;
@@ -89,6 +81,8 @@ public class MainActivity extends AppCompatActivity {
     public void addScore(int score) {
         this.score += score;
     }
+=======
+>>>>>>> 6379c2b7259d38c13369b4cb2964808379859926
 
     public void setActivityBackgroundColor(int color) {
         View view = this.getWindow().getDecorView();

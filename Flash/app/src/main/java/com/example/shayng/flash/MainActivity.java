@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     boolean isRed = false;
     Random rand = new Random();
-    int score=0;
+    private int score=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,24 +69,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void onFlash(View view){
 
-
-
         if(isRed)
         {
             isRed=false;
             setActivityBackgroundColor( Color.GREEN);
-
             score+=100;
-
         }
         else
         {
             score-=100;
         }
 
-
-
    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void addScore(int score) {
+        this.score += score;
+    }
 
     public void setActivityBackgroundColor(int color) {
         View view = this.getWindow().getDecorView();

@@ -7,17 +7,18 @@
     //string for list of game page
     <string name="title_activity_list_of_games">List of Games</string>
     <string name="game1">Human Calculator</string>
-    <string name="game2">Math Game 2</string>
-    <string name="game3">Logic Game 1</string>
+    <string name="game2">Superhuman Calculato</string>
+    <string name="game3">Logic Game</string>
     <string name="game4">Fast Tap</string>
     <string name="game5">Reaction</string>
     <string name="game6">Flash</string>
     <string name="game7">Simon</string>
-    <string name="game8">Game 8</string>
+    <string name="game8">Simon Advanced</string>
     <string name="game9">Math Quiz</string>
     <string name="game10">Game 10</string>
     <string name="game11">Game 11</string>
     <string name="game12">Game 12</string>
+
     <string name="title_activity_game1">Human Calculator</string>
     //Math Games
     <string name="solve">Solve:\n</string>
@@ -32,7 +33,7 @@
     //Game 2: Logic Game 1
     <string name="tap">tap</string>
     <string name="Rotate">\nRotate</string>
-    <string name="logicGame1">Logic Game 1</string>
+    <string name="logicGame1">Logic Game</string>
     //Game 3: Fast Tap
     <string name="speedText">Tap the screen when it changes color!</string>
     <string name="fastTap">Fast Tap</string>
@@ -47,7 +48,7 @@
     <string name="back_Button">Home</string>
     <string name="play_again">Play Again</string>
     <string name="play_next">Play Next</string>
-    <string name="score">SCORE NEEDED</string>
+    <string name="score">0</string>
     <string name="title_activity_logic_game1">LogicGame1</string>
     <string name="title_activity_speed_game1">SpeedGame1</string>
     <string name="title_activity_reaction_game1">ReactionGame1</string>
@@ -55,8 +56,6 @@
 
 //Simon
     <string name="aboutActivityMainText">
-        Simon was created by Suzanne Kersten and Harrison Welch for their CSCI 4020 class,
-        taught by the esteemed Dr. Nicholson.
     </string>
     <string name="soundEffectAttribution">
         <a href="https://freesound.org/people/qubodup/sounds/140773/">&#x20;Menu Ping - qubodup</a>\n

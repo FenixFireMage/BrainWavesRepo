@@ -64,7 +64,7 @@ public class ListOfGamesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
-                Intent intent = new Intent(ListOfGamesActivity.this, SpeedGame1.class);
+                Intent intent = new Intent(ListOfGamesActivity.this, ReactionGame1.class);
                 startActivity(intent);
             }
         });
@@ -73,7 +73,7 @@ public class ListOfGamesActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
-                Intent intent = new Intent(ListOfGamesActivity.this, ReactionGame1.class);
+                Intent intent = new Intent(ListOfGamesActivity.this, ReactionGame2.class);
                 startActivity(intent);
             }
         });

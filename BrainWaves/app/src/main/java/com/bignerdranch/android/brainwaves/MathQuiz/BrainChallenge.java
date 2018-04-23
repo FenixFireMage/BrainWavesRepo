@@ -277,9 +277,9 @@ public class BrainChallenge extends Activity {
 
         }
     }
-    @Override
-    public void onBackPressed() {
-        Intent main = new Intent(BrainChallenge.this, MyActivity.class);
-        startActivity(main);
-    }
+//    @Override
+//    public void onBackPressed() {
+//        Intent main = new Intent(BrainChallenge.this, MyActivity.class);
+//        startActivity(main);
+//    }
 }

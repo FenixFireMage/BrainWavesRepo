@@ -97,9 +97,9 @@ public class MyActivity extends Activity {
         }
         return super.onOptionsItemSelected(item);
     }
-    @Override
-    public void onBackPressed() {
-        Intent main = new Intent(MyActivity.this, ListOfGamesActivity.class);
-        startActivity(main);
-    }
+//    @Override
+//    public void onBackPressed() {
+//        Intent main = new Intent(MyActivity.this, ListOfGamesActivity.class);
+//        startActivity(main);
+//    }
 }

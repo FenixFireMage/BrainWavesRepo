@@ -72,9 +72,9 @@ public class Help extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    public void onBackPressed() {
-        Intent main = new Intent(Help.this, MyActivity.class);
-        startActivity(main);
-    }
+//    @Override
+//    public void onBackPressed() {
+//        Intent main = new Intent(Help.this, MyActivity.class);
+//        startActivity(main);
+//    }
 }

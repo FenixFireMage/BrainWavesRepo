@@ -72,8 +72,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
    }
-<<<<<<< HEAD
-
+// A Merge error had the following two methods set as potentially deleted
+// If they are not used recommendation is for simply commenting them out
     public int getScore() {
         return score;
     }
@@ -81,9 +81,7 @@ public class MainActivity extends AppCompatActivity {
     public void addScore(int score) {
         this.score += score;
     }
-=======
->>>>>>> 6379c2b7259d38c13369b4cb2964808379859926
-
+//
     public void setActivityBackgroundColor(int color) {
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(color);

@@ -74,6 +74,93 @@
             android:label="@string/title_activity_simon_game"
             android:theme="@style/AppTheme.NoActionBar"
             android:configChanges="keyboard|keyboardHidden|screenSize" />
+
+<!--        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/AppTheme.Dark" />-->
+        <activity
+            android:name=".MathQuiz.MyActivity"
+            android:theme="@style/AppTheme.Dark" />
+
+<!--        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />-->
+
+<!--        <activity
+            android:name=".SignupActivity"
+            android:theme="@style/AppTheme.Dark" />-->
+ <!--       <activity
+            android:name=".Splashscreen"
+            android:label="@string/title_activity_main"
+            android:theme="@style/AppTheme.Dark" />-->
+<!--        <activity
+            android:name=".GameMenuActivity"
+            android:theme="@style/AppTheme.Dark" />-->
+ <!--       <activity
+            android:name=".SpaceShip.SpaceMainActivity"
+            android:theme="@style/AppTheme.Dark" />-->
+<!--        <activity
+            android:name=".IQtest.FirstActivity"
+            android:theme="@style/AppTheme.Dark" />-->
+<!--        <activity
+            android:name=".IQtest.Easy1Activity"
+            android:theme="@style/AppTheme.Dark" />-->
+<!--        <activity
+            android:name=".IQtest.ResultActivity"
+            android:theme="@style/AppTheme.Dark" />-->
+
+<!--        <activity
+            android:name=".PlayerProfileActivity"
+            android:theme="@style/AppTheme.Dark" />
+&lt;!&ndash;        <activity
+            android:name=".ConcentrationAppMenuActivity"
+            android:theme="@style/AppTheme.Dark" />&ndash;&gt;
+        <activity
+            android:name=".ColorPhun.Activities.ColorMainActivity"
+            android:label="@string/title_activity_color_main"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".ColorPhun.Activities.EasyGameColorfunActivity"
+            android:theme="@style/AppTheme.Dark" />
+        &lt;!&ndash;<activity&ndash;&gt;
+        &lt;!&ndash;android:name=".ColorPhun.Activities.MainGameColorfunActivity"&ndash;&gt;
+        &lt;!&ndash;android:theme="@style/AppTheme.Dark" />&ndash;&gt;
+        <activity
+            android:name=".ColorPhun.Activities.GameOverColorActivity"
+            android:label="@string/title_activity_game_over_color"
+            android:theme="@style/AppTheme.Dark" />-->
+
+<!--        <activity
+            android:name=".MemoryGame.MemoryActivity"
+            android:theme="@style/AppTheme.Dark" />-->
+        <activity
+            android:name=".MathQuiz.BrainChallenge"
+            android:label="@string/title_activity_quiz"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".MathQuiz.Help"
+            android:label="@string/title_activity_help"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".MathQuiz.Highscore"
+            android:label="@string/title_activity_highscore"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".MathQuiz.ScoreScreen"
+            android:label="@string/title_activity_score_screen"
+            android:theme="@style/AppTheme.Dark" />
+<!--        <activity
+            android:name=".IntelligenceAppMenuActivity"
+            android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".MemoryGame.FirstMemoryActivity"
+            android:theme="@style/AppTheme.Dark" />
+
+        <service
+            android:name=".MusicService"
+            android:enabled="true"
+            android:stopWithTask="true"></service>-->
+
     </application>
 
 

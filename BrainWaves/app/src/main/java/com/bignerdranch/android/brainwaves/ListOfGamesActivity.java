@@ -6,15 +6,23 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.bignerdranch.android.brainwaves.MathQuiz.MyActivity;
 import com.bignerdranch.android.brainwaves.simon.SimonGameActivity;
 import com.bignerdranch.android.brainwaves.simon.SimonMainActivity;
 
 public class ListOfGamesActivity extends AppCompatActivity {
-    private Button mMathGame1;
-    private Button mMathGame2;
-    private Button mLogicGame1;
-    private Button mSpeedGame1;
-    private Button mSpeedGame2;
+    private Button Game1;
+    private Button Game2;
+    private Button Game3;
+    private Button Game4;
+    private Button Game5;
+    private Button Game6;
+    private Button Game7;
+    private Button Game8;
+    private Button Game9;
+    private Button Game10;
+    private Button Game11;
+    private Button Game12;
 
 
     @Override
@@ -23,8 +31,8 @@ public class ListOfGamesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_of_games);
 
         // connecting to mathGame1
-        mMathGame1= (Button) findViewById(R.id.buttonGame1);
-        mMathGame1.setOnClickListener(new View.OnClickListener() {
+        Game1 = (Button) findViewById(R.id.buttonGame1);
+        Game1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
@@ -32,8 +40,8 @@ public class ListOfGamesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mMathGame2= (Button) findViewById(R.id.buttonGame2);
-        mMathGame2.setOnClickListener(new View.OnClickListener() {
+        Game2 = (Button) findViewById(R.id.buttonGame2);
+        Game2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
@@ -41,8 +49,8 @@ public class ListOfGamesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mLogicGame1= (Button) findViewById(R.id.buttonGame3);
-        mLogicGame1.setOnClickListener(new View.OnClickListener() {
+        Game3 = (Button) findViewById(R.id.buttonGame3);
+        Game3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
@@ -51,8 +59,8 @@ public class ListOfGamesActivity extends AppCompatActivity {
             }
         });
 
-        mSpeedGame1= (Button) findViewById(R.id.buttonGame4);
-        mSpeedGame1.setOnClickListener(new View.OnClickListener() {
+        Game4 = (Button) findViewById(R.id.buttonGame4);
+        Game4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
@@ -60,8 +68,8 @@ public class ListOfGamesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mSpeedGame2= (Button) findViewById(R.id.buttonGame5);
-        mSpeedGame2.setOnClickListener(new View.OnClickListener() {
+        Game5 = (Button) findViewById(R.id.buttonGame5);
+        Game5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
@@ -69,8 +77,8 @@ public class ListOfGamesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mSpeedGame2= (Button) findViewById(R.id.buttonGame6);
-        mSpeedGame2.setOnClickListener(new View.OnClickListener() {
+        Game6 = (Button) findViewById(R.id.buttonGame6);
+        Game6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
@@ -78,8 +86,8 @@ public class ListOfGamesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mSpeedGame2= (Button) findViewById(R.id.buttonGame7);
-        mSpeedGame2.setOnClickListener(new View.OnClickListener() {
+        Game7 = (Button) findViewById(R.id.buttonGame7);
+        Game7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
@@ -87,13 +95,49 @@ public class ListOfGamesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mSpeedGame2= (Button) findViewById(R.id.buttonGame8);
-        mSpeedGame2.setOnClickListener(new View.OnClickListener() {
+        Game8 = (Button) findViewById(R.id.buttonGame8);
+        Game8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
                 Intent intent = new Intent(ListOfGamesActivity.this, SimonMainActivity.class);
                 startActivity(intent);
+            }
+        });
+        Game9 = (Button) findViewById(R.id.buttonGame9);
+        Game9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(ListOfGamesActivity.this, MyActivity.class);
+                startActivity(intent);
+            }
+        });
+        Game10 = (Button) findViewById(R.id.buttonGame10);
+        Game10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+//                Intent intent = new Intent(ListOfGamesActivity.this, SimonMainActivity.class);
+//                startActivity(intent);
+            }
+        });
+        Game11 = (Button) findViewById(R.id.buttonGame11);
+        Game11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+//                Intent intent = new Intent(ListOfGamesActivity.this, SimonMainActivity.class);
+//                startActivity(intent);
+            }
+        });
+        Game12 = (Button) findViewById(R.id.buttonGame12);
+        Game12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+//                Intent intent = new Intent(ListOfGamesActivity.this, SimonMainActivity.class);
+//                startActivity(intent);
             }
         });
     }

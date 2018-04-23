@@ -6,6 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.bignerdranch.android.brainwaves.simon.SimonGameActivity;
+import com.bignerdranch.android.brainwaves.simon.SimonMainActivity;
+
 public class ListOfGamesActivity extends AppCompatActivity {
     private Button mMathGame1;
     private Button mMathGame2;
@@ -63,6 +66,33 @@ public class ListOfGamesActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //Start ListOfGamesActivity
                 Intent intent = new Intent(ListOfGamesActivity.this, ReactionGame1.class);
+                startActivity(intent);
+            }
+        });
+        mSpeedGame2= (Button) findViewById(R.id.buttonGame6);
+        mSpeedGame2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(ListOfGamesActivity.this, FlashGame.class);
+                startActivity(intent);
+            }
+        });
+        mSpeedGame2= (Button) findViewById(R.id.buttonGame7);
+        mSpeedGame2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(ListOfGamesActivity.this, SimonGameActivity.class);
+                startActivity(intent);
+            }
+        });
+        mSpeedGame2= (Button) findViewById(R.id.buttonGame8);
+        mSpeedGame2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(ListOfGamesActivity.this, SimonMainActivity.class);
                 startActivity(intent);
             }
         });

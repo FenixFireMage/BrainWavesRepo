@@ -4,16 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#321f"
-    tools:context="com.bignerdranch.android.brainwaves.ReactionGame1">
+    android:background="@color/colorPrimary"
+    tools:context="com.bignerdranch.android.brainwaves.ReactionGame1"
+    android:theme="@style/brainstyle">
 
     <TextView
-        android:id="@+id/Instruction"
+        android:id="@+id/timeLeft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
-        android:text="Press button when the screen flashes"
+        android:text="Time Left:0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,52 +29,15 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:onClick="counter"
-        android:text="Flash!"
+        android:text="TAP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Instruction" />
+        app:layout_constraintTop_toBottomOf="@+id/timeLeft" />
 
-    <EditText
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="132dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Reaction Game!"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/crntAvgRespTime"
-        android:layout_width="wrap_content"
-        android:layout_height="16dp"
-        android:layout_marginBottom="37dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="34dp"
-        android:text="Avg Response Time: 0.3 sec"
-        app:layout_constraintBottom_toTopOf="@+id/timer"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
 
-    <EditText
-        android:id="@+id/timer"
-        android:layout_width="118dp"
-        android:layout_height="47dp"
-        android:layout_marginBottom="100dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:ems="10"
-        android:inputType="time"
-        android:text="Time Left: 0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
+
 
     <TextView
         android:id="@+id/counter"
@@ -83,10 +47,10 @@
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
-        android:text="Score Counter"
-        app:layout_constraintBottom_toTopOf="@+id/Instruction"
+        android:text="Score:"
+        app:layout_constraintBottom_toTopOf="@+id/timeLeft"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        app:layout_constraintTop_toBottomOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">BrainWaves</string>
+    <string name="games">Games</string>
+    <string name="play">Play</string>
+    <string name="profile">Profile</string>
+    <string name="daily">Daily</string>
+    //string for list of game page
+    <string name="title_activity_list_of_games">List of Games</string>
+    <string name="game1">Human Calculator</string>
+    <string name="game2">Game 2</string>
+    <string name="game3">Game 3</string>
+    <string name="game4">Game 4</string>
+    <string name="game5">Game 5</string>
+    <string name="game6">Game 6</string>
+    <string name="game7">Game 7</string>
+    <string name="game8">Game 8</string>
+    <string name="game9">Game 9</string>
+    <string name="game10">Game 10</string>
+    <string name="game11">Game 11</string>
+    <string name="game12">Game 12</string>
+    <string name="title_activity_game1">Human Calculater</string>
+    //Game 1: human calculator
+    <string name="solve">Solve:\n</string>
+    <string name="start">Start</string>
+    <string name="timer">Timer</string>
+    <string name="next">Next</string>
+    <string name="problem1"> 5 + 3 = </string>
+    <string name="problem2"> 5 * 3 = </string>
+    <string name="problem3"> 6 - 2 = </string>
+    <string name="problem4"> 6 / 3 = </string>
+    //Game 2: Logic Game 1
+    <string name="tap">tap</string>
+    <string name="Rotate">\nRotate</string>
+    <string name="logicGame1">Logic Game 1</string>
+    //Game 3: Fast Tap
+    <string name="speedText">Tap the screen when it changes color!</string>
+    <string name="fastTap">Fast Tap</string>
+    //Profile
+    <string name="yourName">Your Name</string>
+    <string name="brainLevel">Brain Level: 10</string>
+    <string name="age">Age: 21</string>
+    //End of game page
+    <string name="title_activity_end_of_game">End of Game</string>
+    <string name="end_of_game">Times up!\n Your Score:\n</string>
+    <string name="back_Button">Home</string>
+    <string name="play_again">Play Again</string>
+    <string name="play_next">Play Next</string>
+    <string name="score">SCORE NEEDED</string>
+    <string name="title_activity_logic_game1">LogicGame1</string>
+    <string name="title_activity_speed_game1">SpeedGame1</string>
+    <string name="title_activity_profile">Profile</string>
+
+
+</resources>

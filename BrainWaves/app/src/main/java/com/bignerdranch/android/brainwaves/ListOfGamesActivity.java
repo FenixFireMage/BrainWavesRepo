@@ -87,15 +87,7 @@ public class ListOfGamesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        mSpeedGame2= (Button) findViewById(R.id.buttonGame8);
-        mSpeedGame2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Start ListOfGamesActivity
-                Intent intent = new Intent(ListOfGamesActivity.this, SimonMainActivity.class);
-                startActivity(intent);
-            }
-        });
+
     }
 
 }

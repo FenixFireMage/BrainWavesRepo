@@ -30,8 +30,11 @@ public class MathGame0Activity extends AppCompatActivity {
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // mUserAnswer = Integer.parseInt(mUser.getText().toString());
+               //int mUserAnswer = Integer.parseInt(mUser.getText().toString());
                 mCurrentIndex = (mCurrentIndex + 1);
+
+
+
                 if(mCurrentIndex < mNumberOfQuestions) {
                     updateQuestion();
                 }else{

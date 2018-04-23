@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 /**
- * Created by Suzanne on 3/8/2018.
+ * Created by paul on 3/8/2018.
  * Holds a static 'toast" function that makes sure only one toast is displayed on screen
  * at a time, preventing a long toast-queue buildup
  */

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="#66c4de"
     android:orientation="vertical"
-    tools:context="com.bignerdranch.android.brainwaves.SimonAboutActivity">
+    tools:context="com.bignerdranch.android.brainwaves.simon.SimonAboutActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

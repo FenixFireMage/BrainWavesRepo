@@ -7,6 +7,7 @@
     android:background="@drawable/birch_background"
     android:id="@+id/main_constraint_layout">
 
+
     <GridLayout
         android:id="@+id/black_simon_shell"
         android:layout_width="0dp"

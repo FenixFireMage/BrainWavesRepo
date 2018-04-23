@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/birch_background"
-    tools:context="com.bignerdranch.android.brainwaves.SimonGameActivity">
+    tools:context="com.bignerdranch.android.brainwaves.simon.SimonGameActivity">
 
     <GridLayout
         android:id="@+id/black_simon_shell"

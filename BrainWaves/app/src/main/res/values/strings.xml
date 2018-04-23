@@ -11,14 +11,14 @@
     <string name="game3">Logic Game 1</string>
     <string name="game4">Fast Tap</string>
     <string name="game5">Reaction</string>
-    <string name="game6">Game 6</string>
-    <string name="game7">Game 7</string>
+    <string name="game6">Flash</string>
+    <string name="game7">Simon</string>
     <string name="game8">Game 8</string>
     <string name="game9">Game 9</string>
     <string name="game10">Game 10</string>
     <string name="game11">Game 11</string>
     <string name="game12">Game 12</string>
-    <string name="title_activity_game1">Human Calculater</string>
+    <string name="title_activity_game1">Human Calculator</string>
     //Math Games
     <string name="solve">Solve:\n</string>
     <string name="start">Start</string>
@@ -87,5 +87,16 @@
     <string name="howToPlayMainTextGame2">
         Instead of repeating the sequence, you have to play the sequence back in reverse! Tricky tricky! Recommended for those looking for a challenge.
     </string>
-//EndSimon
+
+    <string name="title_activity_simon_main">SimonMain</string>
+    <string name="title_activity_simon_about">SimonAbout</string>
+    <string name="title_activity_simon_how_to_play">SimonHowToPlay</string>
+    <string name="title_activity_simon_game">SimonGame</string>
+
+    //EndSimon
+
+    <string name="title_activity_flash_game">FlashGame</string>
+    <string name="button">Button</string>
+
+
 </resources>

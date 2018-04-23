@@ -11,14 +11,14 @@
     <string name="game3">Logic Game 1</string>
     <string name="game4">Fast Tap</string>
     <string name="game5">Reaction</string>
-    <string name="game6">Game 6</string>
-    <string name="game7">Game 7</string>
+    <string name="game6">Flash</string>
+    <string name="game7">Simon</string>
     <string name="game8">Game 8</string>
     <string name="game9">Game 9</string>
     <string name="game10">Game 10</string>
     <string name="game11">Game 11</string>
     <string name="game12">Game 12</string>
-    <string name="title_activity_game1">Human Calculater</string>
+    <string name="title_activity_game1">Human Calculator</string>
     //Math Games
     <string name="solve">Solve:\n</string>
     <string name="start">Start</string>
@@ -37,6 +37,11 @@
     <string name="speedText">Tap the screen when it changes color!</string>
     <string name="fastTap">Fast Tap</string>
     //End of game page
+    //Profile
+    <string name="yourName">Your Name</string>
+    <string name="brainLevel">Brain Level: 10</string>
+    <string name="age">Age: 21</string>
+    //End of Profile
     <string name="title_activity_end_of_game">End of Game</string>
     <string name="end_of_game">Times up!\n Your Score:\n</string>
     <string name="back_Button">Home</string>
@@ -46,6 +51,52 @@
     <string name="title_activity_logic_game1">LogicGame1</string>
     <string name="title_activity_speed_game1">SpeedGame1</string>
     <string name="title_activity_reaction_game1">ReactionGame1</string>
+    <string name="title_activity_profile">Profile</string>
+
+//Simon
+    <string name="aboutActivityMainText">
+        Simon was created by Suzanne Kersten and Harrison Welch for their CSCI 4020 class,
+        taught by the esteemed Dr. Nicholson.
+    </string>
+    <string name="soundEffectAttribution">
+        <a href="https://freesound.org/people/qubodup/sounds/140773/">&#x20;Menu Ping - qubodup</a>\n
+        <a href="https://freesound.org/people/edsward/sounds/341871/">Correct Ping - edsward</a>\n
+        <a href="https://freesound.org/people/Uminari/sounds/389724/">Falling rock sound (in-game button) - Uminari</a>\n
+        <a href="https://freesound.org/people/THE_bizniss/sounds/39459/">Laser sound (in-game button) - THE_bizniss</a>\n
+        <a href="https://freesound.org/people/Snapper4298/sounds/178186/">Camera Click (in-game button) - Snapper4298</a>\n
+        <a href="https://freesound.org/people/Heigh-hoo/sounds/9876/">Car Door Closing (in-game button) - Heigh-hoo</a>\n
+        <a href="https://freesound.org/people/troym1/sounds/325443/">Wrong Voice Clip - troym1</a>\n
+        <a href="https://pixabay.com/en/wallpaper-pattern-colorful-color-2574931/">Main Menu background - geralt</a>\n
+        <a href="https://openclipart.org/detail/240278/birch-wood-texture">Game background - Wuzzy</a>
+    </string>
+
+    <string name="returnToMain">Return to Main Menu</string>
+
+    <string name="howToPlayMainTextOriginal">
+        Upon starting a game, Simon will start a pattern by lighting up one of the four colored buttons
+        and playing a sound unique to that button. Your goal is to match that pattern that Simon plays,
+        with each correct sequence adding another button to the end of the sequence.
+        \n\nExample: If Simon lights up the blue button, you press the blue button. Then Simon lights up
+        blue button and the red button, so you press the blue button and the red button in that order, continuing
+        on until you make a mistake in the sequence.
+        \n\nYour score at the end is however many buttons were in the last sequence successfully completed.
+    </string>
+    <string name="howToPlayMainTextGame1">
+        Same as original Simon, but with two buttons added to the sequence each time instead of one! Are you sure you can keep up? Recommended for those with experience in PERL programming!
+    </string>
+    <string name="howToPlayMainTextGame2">
+        Instead of repeating the sequence, you have to play the sequence back in reverse! Tricky tricky! Recommended for those looking for a challenge.
+    </string>
+
+    <string name="title_activity_simon_main">SimonMain</string>
+    <string name="title_activity_simon_about">SimonAbout</string>
+    <string name="title_activity_simon_how_to_play">SimonHowToPlay</string>
+    <string name="title_activity_simon_game">SimonGame</string>
+
+    //EndSimon
+
+    <string name="title_activity_flash_game">FlashGame</string>
+    <string name="button">Button</string>
 
 
 </resources>

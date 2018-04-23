@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.bignerdranch.android.brainwaves.MathQuiz.MyActivity;
+import com.bignerdranch.android.brainwaves.MathQuiz.ScoreScreen;
 import com.bignerdranch.android.brainwaves.simon.SimonGameActivity;
 import com.bignerdranch.android.brainwaves.simon.SimonMainActivity;
 
@@ -142,4 +143,9 @@ public class ListOfGamesActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent main = new Intent(ListOfGamesActivity.this, MainMenuActivity.class);
+        startActivity(main);
+    }
 }

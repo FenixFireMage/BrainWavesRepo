@@ -1,4 +1,4 @@
-package com.bignerdranch.android.brainwaves;
+package com.bignerdranch.android.brainwaves.simon;
 
 import android.content.Context;
 import android.widget.Toast;

@@ -1,4 +1,4 @@
-package com.bignerdranch.android.brainwaves;
+package com.bignerdranch.android.brainwaves.simon;
 
 import android.app.Activity;
 import android.media.AudioAttributes;
@@ -12,6 +12,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bignerdranch.android.brainwaves.R;
 
 import java.util.Arrays;
 import java.util.LinkedList;

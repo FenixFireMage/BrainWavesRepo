@@ -114,7 +114,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/game9"
                 android:textAllCaps="false"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/buttonGame10"
@@ -122,7 +123,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/game10"
                 android:textAllCaps="false"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/buttonGame11"
@@ -130,7 +132,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/game11"
                 android:textAllCaps="false"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/buttonGame12"
@@ -138,7 +141,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/game12"
                 android:textAllCaps="false"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:visibility="gone" />
         </LinearLayout>
 
     </ScrollView>

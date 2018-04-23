@@ -1,4 +1,4 @@
-package com.bignerdranch.android.brainwaves;
+package com.bignerdranch.android.brainwaves.simon;
 
 import android.app.Activity;
 import android.content.Context;
@@ -8,6 +8,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.TextView;
+
+import com.bignerdranch.android.brainwaves.R;
 
 import java.io.BufferedReader;
 import java.io.FileOutputStream;

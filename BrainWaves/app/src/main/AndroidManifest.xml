@@ -53,14 +53,28 @@
             android:label="@string/title_activity_speed_game1"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
+            android:name=".FlashGame"
+            android:label="@string/title_activity_flash_game"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".Profile"
             android:label="@string/title_activity_profile"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
-        <activity android:name=".SimonMainActivity" />
-        <activity android:name=".SimonAboutActivity" />
-        <activity android:name=".SimonHowToPlayActivity" />
-        <activity android:name=".SimonGameActivity" android:configChanges="keyboard|keyboardHidden|screenSize" />
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".simon.SimonMainActivity"
+            android:label="@string/title_activity_simon_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".simon.SimonAboutActivity"
+            android:label="@string/title_activity_simon_about"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".simon.SimonHowToPlayActivity"
+            android:label="@string/title_activity_simon_how_to_play"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".simon.SimonGameActivity"
+            android:label="@string/title_activity_simon_game"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="keyboard|keyboardHidden|screenSize" />
     </application>
+
 
 </manifest>

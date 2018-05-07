@@ -46,9 +46,7 @@ public class ScoreScreen extends Activity {
         rightText.setText(rightPoints);
         wrongText.setText(wrongPoints);
 
-
-
-        SharedPreferences sharedPref = this.getSharedPreferences("score.xml",MODE_PRIVATE);
+        SharedPreferences sharedPref = this.getSharedPreferences("MathScore",MODE_PRIVATE);
         int myvalue = sharedPref.getInt("score", 0);
 
         if(myvalue < Integer.parseInt(rightMessage))

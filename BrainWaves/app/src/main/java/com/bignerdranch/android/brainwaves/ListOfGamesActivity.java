@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.bignerdranch.android.brainwaves.ColorPhun.Activities.ColorMainActivity;
+import com.bignerdranch.android.brainwaves.ColorPhun.Activities.EasyGameColorPhunActivity;
 import com.bignerdranch.android.brainwaves.MathQuiz.MyActivity;
 import com.bignerdranch.android.brainwaves.MathQuiz.ScoreScreen;
 import com.bignerdranch.android.brainwaves.simon.SimonGameActivity;
@@ -118,9 +120,9 @@ public class ListOfGamesActivity extends AppCompatActivity {
         Game10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Start ListOfGamesActivity
-//                Intent intent = new Intent(ListOfGamesActivity.this, SimonMainActivity.class);
-//                startActivity(intent);
+//                Start ListOfGamesActivity
+                Intent intent = new Intent(ListOfGamesActivity.this, EasyGameColorPhunActivity.class);
+                startActivity(intent);
             }
         });
         Game11 = (Button) findViewById(R.id.buttonGame11);

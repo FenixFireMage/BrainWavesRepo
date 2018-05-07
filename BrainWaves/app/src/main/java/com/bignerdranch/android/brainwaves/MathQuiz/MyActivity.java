@@ -10,7 +10,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
-import com.bignerdranch.android.brainwaves.IntelligenceAppMenuActivity;
 import com.bignerdranch.android.brainwaves.ListOfGamesActivity;
 import com.bignerdranch.android.brainwaves.R;
 

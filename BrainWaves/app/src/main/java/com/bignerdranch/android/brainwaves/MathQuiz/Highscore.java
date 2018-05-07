@@ -18,7 +18,7 @@ public class Highscore extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_highscore);
         TextView textView = findViewById(R.id.hello);
-        SharedPreferences sharedPref = this.getSharedPreferences("score.xml",MODE_PRIVATE);
+        SharedPreferences sharedPref = this.getSharedPreferences("Mathscore",MODE_PRIVATE);
         int myvalue = sharedPref.getInt("score", 0);
         textView.setText("High Score!"+myvalue);
     }

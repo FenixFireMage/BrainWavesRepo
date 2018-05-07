@@ -42,22 +42,21 @@ public class MainMenuActivity extends Activity {
                 //Start ListOfGamesActivity
                 Random random = new Random();
                 randomInt = random.nextInt(3) + 1;
+                Intent intent;
                 if(randomInt == 1)
                 {
-                    Intent intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
-                    startActivity(intent);
+                    intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
                 }
-                if(randomInt == 2)
+                else if(randomInt == 2)
                 {
-                    Intent intent = new Intent(MainMenuActivity.this, FlashGame.class);
-                    startActivity(intent);
+                    intent = new Intent(MainMenuActivity.this, FlashGame.class);
                 }
-                if(randomInt == 3)
+                else
                 {
-                    Intent intent = new Intent(MainMenuActivity.this, SimonGameActivity.class);
-                    startActivity(intent);
-                }
+                    intent = new Intent(MainMenuActivity.this, SimonGameActivity.class);
 
+                }
+                startActivity(intent);
             }
         });
         mDaily = findViewById(R.id.daily_button);

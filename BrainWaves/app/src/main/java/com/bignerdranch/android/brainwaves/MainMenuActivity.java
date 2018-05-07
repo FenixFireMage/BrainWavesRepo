@@ -60,7 +60,7 @@ public class MainMenuActivity extends Activity {
 
             }
         });
-        mDaily = (Button) findViewById(R.id.daily_button);
+        mDaily = findViewById(R.id.daily_button);
         mDaily.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,7 +85,7 @@ public class MainMenuActivity extends Activity {
                 }
             }
         });
-        mProfile = (Button) findViewById(R.id.profile_button);
+        mProfile = findViewById(R.id.profile_button);
         mProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -8,11 +8,15 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
+import java.util.Calendar;
+import java.util.Random;
+
 public class MainMenuActivity extends Activity {
     private Button mProfile;
     private Button mListOfGames;
     private Button mDaily;
     private Button mPlay;
+    private int randomInt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +38,24 @@ public class MainMenuActivity extends Activity {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
-                Intent intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
-                startActivity(intent);
+                Random random = new Random();
+                randomInt = random.nextInt(3) + 1;
+                if(randomInt == 1)
+                {
+                    Intent intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
+                    startActivity(intent);
+                }
+                if(randomInt == 2)
+                {
+                    Intent intent = new Intent(MainMenuActivity.this, LogicGame1.class);
+                    startActivity(intent);
+                }
+                if(randomInt == 3)
+                {
+                    Intent intent = new Intent(MainMenuActivity.this, SpeedGame1.class);
+                    startActivity(intent);
+                }
+
             }
         });
         mDaily = (Button) findViewById(R.id.daily_button);
@@ -43,8 +63,24 @@ public class MainMenuActivity extends Activity {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
-                Intent intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
-                startActivity(intent);
+                int seed = Calendar.DAY_OF_MONTH;
+                Random random = new Random(seed);
+                randomInt = random.nextInt(3) + 1;
+                if(randomInt == 1)
+                {
+                    Intent intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
+                    startActivity(intent);
+                }
+                if(randomInt == 2)
+                {
+                    Intent intent = new Intent(MainMenuActivity.this, LogicGame1.class);
+                    startActivity(intent);
+                }
+                if(randomInt == 3)
+                {
+                    Intent intent = new Intent(MainMenuActivity.this, SpeedGame1.class);
+                    startActivity(intent);
+                }
             }
         });
         mProfile = (Button) findViewById(R.id.profile_button);

@@ -13,6 +13,10 @@ public class ReactionGame1 extends AppCompatActivity {
     int timeLeft;
     TextView showValue;
     TextView currTime;
+<<<<<<< HEAD
+=======
+
+>>>>>>> Paul
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/birch_background"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.bignerdranch.android.brainwaves.ListOfGamesActivity"
     tools:showIn="@layout/activity_list_of_games"
@@ -19,13 +20,12 @@
         android:layout_marginTop="36dp"
         android:text="@string/title_activity_list_of_games"
         android:textColor="@android:color/black"
-        android:textSize="35sp"
+        android:textSize="45sp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/scrollView1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 
     <ScrollView
@@ -35,6 +35,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,38 +50,47 @@
                 android:id="@+id/buttonGame1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button"
                 android:text="@string/game1"
                 android:textAllCaps="false"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/buttonGame2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button"
                 android:text="@string/game2"
                 android:textAllCaps="false"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/buttonGame3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button"
                 android:text="@string/game3"
                 android:textAllCaps="false"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/buttonGame4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button"
                 android:text="@string/game4"
                 android:textAllCaps="false"
-                android:textSize="25sp" />
+                android:textSize="25sp"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/buttonGame5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button"
                 android:text="@string/game5"
                 android:textAllCaps="false"
                 android:textSize="25sp" />
@@ -89,6 +99,7 @@
                 android:id="@+id/buttonGame6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button"
                 android:text="@string/game6"
                 android:textAllCaps="false"
                 android:textSize="25sp" />
@@ -97,11 +108,64 @@
                 android:id="@+id/buttonGame7"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/button"
                 android:text="@string/game7"
                 android:textAllCaps="false"
                 android:textSize="25sp" />
 
+<<<<<<< HEAD
 
+=======
+            <Button
+                android:id="@+id/buttonGame8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="@string/game8"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/buttonGame9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="@string/game9"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/buttonGame10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="@string/game10"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:visibility="visible" />
+
+            <Button
+                android:id="@+id/buttonGame11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="@string/game11"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/buttonGame12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="@string/game12"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:visibility="gone" />
+>>>>>>> Paul
         </LinearLayout>
 
     </ScrollView>

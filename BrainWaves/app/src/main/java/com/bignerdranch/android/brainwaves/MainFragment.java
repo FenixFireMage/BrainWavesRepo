@@ -18,8 +18,8 @@ import com.google.firebase.database.DatabaseReference;
  * A simple {@link Fragment} subclass.
  */
 public class MainFragment extends Fragment {
-    private FirebaseAuth firebaseAuth;
-    DatabaseReference ref;
+    private FirebaseAuth mAuth;
+    DatabaseReference mDatabase;
     TextView myTextView;
 
 
@@ -32,11 +32,11 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
-//        View photoHeader = view.findViewById(R.id.photoHeader);
+        View photoHeader = view.findViewById(R.id.photoHeader);
 //        /* For devices equal or higher than lollipop set the translation above everything else */
-//        photoHeader.setTranslationZ(6);
+        photoHeader.setTranslationZ(6);
 //        /* Redraw the view to show the translation */
-//        photoHeader.invalidate();
+        photoHeader.invalidate();
 
         return view;
     }

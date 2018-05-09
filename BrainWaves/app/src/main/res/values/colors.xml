@@ -3,6 +3,8 @@
     <color name="colorPrimary">#6dabcd</color>
     <color name="colorPrimaryDark">#303f9f</color>
     <color name="colorAccent">#ff4081</color>
+    <color name="colorPrimaryMed">#3F51B5</color>
+
 
     <color name="reactionPrimary">#64ffda</color>
     <color name="primary">#3f78e4</color>

@@ -73,7 +73,7 @@ public class MathQuestionGenerator0 {
                 this.mAnswer[index] = mFirst/ mSecond;
                 break;
             default:
-                System.out.printf("Something wrong in check method in class mathQuestiongenerator");
+                System.out.print("Something wrong in check method in class mathQuestiongenerator");
                 break;
         }
     }

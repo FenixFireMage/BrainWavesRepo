@@ -83,7 +83,7 @@
             android:name=".LoginActivity"
             android:theme="@style/AppTheme.Dark" />
         <activity
-            android:name=".MathQuiz.MyActivity"
+            android:name=".MathQuiz.MathQuizActivity"
             android:theme="@style/AppTheme.Dark" />
 
 <!--        <meta-data
@@ -126,9 +126,9 @@
         <activity
             android:name=".ColorPhun.Activities.EasyGameColorPhunActivity"
             android:theme="@style/AppTheme.Dark" />
-        <activity
-        android:name=".ColorPhun.Activities.MainGameColorPhunActivity"
-        android:theme="@style/AppTheme.Dark" />
+        <!--<activity-->
+        <!--android:name=".ColorPhun.Activities.MainGameColorPhunActivity"-->
+        <!--android:theme="@style/AppTheme.Dark" />-->
         <activity
             android:name=".ColorPhun.Activities.GameOverColorActivity"
             android:label="@string/title_activity_game_over_color"

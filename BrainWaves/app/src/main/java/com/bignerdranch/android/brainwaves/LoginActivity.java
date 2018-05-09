@@ -108,7 +108,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
+//        updateUI(currentUser);
     }
     // [END on_start_check_user]
     {
@@ -221,7 +221,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 }, 3000);
     }//end login(mail,pwd)
 
-    private void signIn(String email, String password) {
+    public void signIn(String email, String password) {
         Log.d(TAG, "signIn:" + email);
         if (!validate()) {
             return;
@@ -238,14 +238,14 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+//                            updateUI(user);
                             onLoginSuccess();
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
                             Toast.makeText(LoginActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            updateUI(null);
+//                            updateUI(null);
                             onLoginFailed();
                         }
 
@@ -323,7 +323,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("LOGIN_ID", email);
         editor.putString("LOGIN_PWD", password);
-        editor.commit();
+        editor.apply();
 
         Intent main = new Intent(LoginActivity.this, MainMenuActivity.class);
         startActivity(main);

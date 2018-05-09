@@ -279,7 +279,7 @@ public class BrainChallenge extends Activity {
     }
     @Override
     public void onBackPressed() {
-        Intent main = new Intent(BrainChallenge.this, MyActivity.class);
+        Intent main = new Intent(BrainChallenge.this, MathQuizActivity.class);
         startActivity(main);
     }
 }

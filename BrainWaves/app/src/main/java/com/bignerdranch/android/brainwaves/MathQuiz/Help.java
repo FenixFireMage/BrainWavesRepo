@@ -31,7 +31,7 @@ public class Help extends Activity {
         Button playButton = findViewById(R.id.button2);
 
         final Intent playIntent = new Intent(this,BrainChallenge.class);
-        final Intent homeIntent = new Intent(this,MyActivity.class);
+        final Intent homeIntent = new Intent(this,MathQuizActivity.class);
 
         //Makes the click of the help button take you to the instructions page
         homeButton.setOnClickListener(new View.OnClickListener() {
@@ -74,7 +74,7 @@ public class Help extends Activity {
 
     @Override
     public void onBackPressed() {
-        Intent main = new Intent(Help.this, MyActivity.class);
+        Intent main = new Intent(Help.this, MathQuizActivity.class);
         startActivity(main);
     }
 }

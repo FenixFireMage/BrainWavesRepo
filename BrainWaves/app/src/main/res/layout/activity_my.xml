@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MathQuiz.MyActivity">
+    tools:context=".MathQuiz.MathQuizActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -37,7 +37,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="51dp"
         android:layout_weight="0.10"
-        android:src="@drawable/blue_brain_waves" />
+        android:src="@drawable/blue_brain_waves"
+        android:contentDescription="TODO" />
 
     <Button
         android:id="@+id/highscores"

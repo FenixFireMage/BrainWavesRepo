@@ -12,6 +12,8 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
+import com.bignerdranch.android.brainwaves.MathQuiz.MathQuizActivity;
+import com.bignerdranch.android.brainwaves.simon.SimonGameActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
@@ -29,6 +31,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Calendar;
+import java.util.Objects;
+import java.util.Random;
+
+import static com.google.android.gms.common.internal.safeparcel.SafeParcelable.NULL;
+
+
 public class MainMenuActivity extends BaseActivity {
     private static final String TAG = "MainMenu";
     private Button mProfile;
@@ -36,23 +45,27 @@ public class MainMenuActivity extends BaseActivity {
     private Button mDaily;
     private Button mPlay;
 
-    private FirebaseAuth mAuth;
+//    private int randomInt;
+
+//    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main_menu);
-
-        mDatabase = FirebaseDatabase.getInstance().getReference();
-        if (getIntent().getExtras() != null) {CheckUserData();}
+        Intent intent;
 
         // [START initialize_auth]
         mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
 
+//        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+//        if (getIntent().getExtras() != null) {CheckUserData();}
+
         // connecting Game button to list of game activity
-        mListOfGames = (Button) findViewById(R.id.list_of_games_button);
+        mListOfGames = findViewById(R.id.list_of_games_button);
         mListOfGames.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,25 +74,26 @@ public class MainMenuActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
-        mPlay = (Button) findViewById(R.id.play_button);
+        mPlay = findViewById(R.id.play_button);
         mPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
-                Intent intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
-                startActivity(intent);
+                Random random = new Random();
+                randomGame(random);
             }
         });
-        mDaily = (Button) findViewById(R.id.daily_button);
+        mDaily = findViewById(R.id.daily_button);
         mDaily.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
-                Intent intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
-                startActivity(intent);
+                int seed = Calendar.DAY_OF_MONTH;
+                Random random = new Random(seed);
+                randomGame(random);
             }
         });
-        mProfile = (Button) findViewById(R.id.profile_button);
+        mProfile = findViewById(R.id.profile_button);
         mProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -98,35 +112,59 @@ public class MainMenuActivity extends BaseActivity {
         FirebaseUser currentUser = mAuth.getCurrentUser();
         // Check auth on Activity start
 
-            onAuthSuccess(currentUser);
+        onAuthSuccess(currentUser);
 
+    }
+
+    private void randomGame(Random random) {
+        int randomInt = random.nextInt(3) + 1;
+        Intent intent;
+        if (randomInt == 1) {
+            intent = new Intent(MainMenuActivity.this, MathQuizActivity.class);
+        } else if (randomInt == 2) {
+            intent = new Intent(MainMenuActivity.this, FlashGame.class);
+        } else {
+            intent = new Intent(MainMenuActivity.this, SimonGameActivity.class);
+
+        }
+        startActivity(intent);
     }
 
     private void onAuthSuccess(FirebaseUser user) {
 
-
         if (user == null) {
             signInAnonymously();
+        } else if (user.isAnonymous()) {
+//                mEmailField.setText(loginID);
+//                mPasswordField.setText(loginPWD);
+            signIn("test1@test.com", "tester");
+        } else {
+            // Name, email address, and profile photo Url
+            String name = user.getDisplayName();
+            String email = user.getEmail();
+            String uid = user.getUid();// The user's ID, unique to the Firebase project.
+
+            if (user.isAnonymous() || (name == null) || (name.equals("")) || (email == null) || (email.equals(""))) {
+                CheckUserData();
+            }
+
+            //            CheckUserData();
+            // Write new user
+//            writeNewUser(user.getUid(), mUsername, user.getEmail());
+
+            // Go to MainActivity
+            //startActivity(new Intent(this, MainMenuActivity.class));
+            //finish();
         }
-//        else{
-////            String username = mUsername;
-////            CheckUserData();
-//            // Write new user
-////            writeNewUser(user.getUid(), mUsername, user.getEmail());
-//
-//            // Go to MainActivity
-//            //startActivity(new Intent(this, MainMenuActivity.class));
-//            //finish();
-//        }
 
     }
 
     // [START basic_write]
-    private void writeNewUser(String userId, String name, String email) {
-        UserInfo user = new UserInfo();
-
-        mDatabase.child("users").child(userId).setValue(user);
-    }
+//    private void writeNewUser(String userId, String name, String email) {
+//        UserInfo user = new UserInfo();
+//
+//        mDatabase.child("users").child(userId).setValue(user);
+//    }
     // [END basic_write]
 /*
 
@@ -159,18 +197,19 @@ public class MainMenuActivity extends BaseActivity {
     }
 */
 
-// Attempt to add menu selector in top right corner
+    // Attempt to add menu selector in top right corner
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int i = item.getItemId();
         if (i == R.id.action_logout) {
             FirebaseAuth.getInstance().signOut();
-        //    startActivity(new Intent(this, SignInActivity.class));
+            //    startActivity(new Intent(this, SignInActivity.class));
             finish();
             return true;
         } else {

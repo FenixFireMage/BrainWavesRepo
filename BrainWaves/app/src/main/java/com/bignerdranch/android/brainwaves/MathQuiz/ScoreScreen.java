@@ -58,7 +58,7 @@ public class ScoreScreen extends Activity {
 
 
 
-        homeIntent = new Intent(this,MyActivity.class);
+        homeIntent = new Intent(this,MathQuizActivity.class);
           quizIntent = new Intent(this,BrainChallenge.class);
 
         homeButton.setOnClickListener(new View.OnClickListener() {
@@ -99,7 +99,7 @@ public class ScoreScreen extends Activity {
     }
     @Override
     public void onBackPressed() {
-        Intent main = new Intent(ScoreScreen.this, MyActivity.class);
+        Intent main = new Intent(ScoreScreen.this, MathQuizActivity.class);
         startActivity(main);
     }
 }

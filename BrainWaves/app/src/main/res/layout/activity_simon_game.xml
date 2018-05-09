@@ -101,7 +101,8 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:src="@drawable/flash_off" />
+            android:src="@drawable/flash_off"
+            android:contentDescription="TODO" />
 
         <ImageView
             android:id="@+id/imageview_top_right"
@@ -109,7 +110,8 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:src="@drawable/flash_off" />
+            android:src="@drawable/flash_off"
+            android:contentDescription="TODO" />
 
         <ImageView
             android:id="@+id/imageview_bottom_left"
@@ -117,7 +119,8 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:src="@drawable/flash_off" />
+            android:src="@drawable/flash_off"
+            android:contentDescription="TODO" />
 
         <ImageView
             android:id="@+id/imageview_bottom_right"
@@ -125,7 +128,8 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:src="@drawable/flash_off" />
+            android:src="@drawable/flash_off"
+            android:contentDescription="TODO" />
 
     </GridLayout>
 
@@ -160,7 +164,8 @@
         app:layout_constraintBottom_toTopOf="@+id/image_green"
         app:layout_constraintRight_toLeftOf="@+id/image_blue"
         app:layout_constraintStart_toStartOf="@+id/black_simon_shell"
-        app:layout_constraintTop_toTopOf="@+id/black_simon_shell" />
+        app:layout_constraintTop_toTopOf="@+id/black_simon_shell"
+        android:contentDescription="TODO" />
 
     <ImageButton
         android:id="@+id/image_purple"
@@ -180,7 +185,8 @@
         app:layout_constraintEnd_toEndOf="@+id/black_simon_shell"
         app:layout_constraintLeft_toRightOf="@+id/image_green"
         app:layout_constraintRight_toLeftOf="@+id/black_simon_shell"
-        app:layout_constraintTop_toBottomOf="@+id/image_blue" />
+        app:layout_constraintTop_toBottomOf="@+id/image_blue"
+        android:contentDescription="TODO" />
 
     <ImageButton
         android:id="@+id/image_blue"
@@ -199,7 +205,7 @@
         app:layout_constraintStart_toEndOf="@+id/image_red"
         app:layout_constraintTop_toTopOf="@+id/black_simon_shell"
 
-        />
+        android:contentDescription="TODO" />
 
     <ImageButton
         android:id="@+id/image_green"
@@ -218,6 +224,7 @@
         app:layout_constraintLeft_toLeftOf="@+id/black_simon_shell"
         app:layout_constraintRight_toLeftOf="@+id/image_purple"
         app:layout_constraintTop_toBottomOf="@+id/image_red"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintVertical_bias="0.461"
+        android:contentDescription="TODO" />
 
 </android.support.constraint.ConstraintLayout>

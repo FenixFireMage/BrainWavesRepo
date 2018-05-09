@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -19,13 +20,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Objects;
+
 public class PlayerProfileActivity extends BaseActivity {
 
 
     String PlayerName,PlayerEmailText,AdressText;
     int AgePlayerText;
-    private FirebaseAuth mAuth;
-    DatabaseReference ref;
+//    private FirebaseAuth mAuth;
+//    DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,26 +36,32 @@ public class PlayerProfileActivity extends BaseActivity {
         setContentView(R.layout.activity_player_profile);
         //ButterKnife.inject(this);
 
-//        if (savedInstanceState == null) {
-//            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-//            fragmentTransaction.add(R.id.fragment_container_profile_player, new MainFragment(), "MainFragment");
-//            fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
-//            fragmentTransaction.commit();
-//        }
-        ref = FirebaseDatabase.getInstance().getReference();
+        if (savedInstanceState == null) {
+            FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
+            fragmentTransaction.add(R.id.fragment_container_profile_player, new MainFragment(), "MainFragment");
+            fragmentTransaction.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+            fragmentTransaction.commit();
+        }
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         //initializing firebase authentication object
         mAuth = FirebaseAuth.getInstance();
         final FirebaseUser user = mAuth.getCurrentUser();
-        ref.child("users").child(user.getUid()).addValueEventListener(new ValueEventListener() {
+
+        if (user==null) {
+            signInAnonymously();
+        }
+        // Add value event listener to the post
+        // [START post_value_event_listener]
+        mDatabase.child("users").child(Objects.requireNonNull(user).getUid()).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Get user value
-//                UserInfo userInfos = dataSnapshot.getValue(UserInfo.class);
+                UserInfo userInfos = dataSnapshot.getValue(UserInfo.class);
 
 //                PlayerEmailText=user.getEmail().toString();
-                PlayerName= mUsername;//userInfos.DisplayNamePlayer().toString();
-                AdressText="";//userInfos.DisplayCountryPlayer().toString();
-                AgePlayerText=0;//userInfos.DisplayAgePlayer();
+                PlayerName= userInfos.DisplayNamePlayer();
+                AdressText= userInfos.DisplayCountryPlayer();
+                AgePlayerText=userInfos.DisplayAgePlayer();
 
 
                 TextView tvnom = (TextView) findViewById(R.id.tvNamePlayer);
@@ -83,12 +92,16 @@ public class PlayerProfileActivity extends BaseActivity {
                 });
                 //tvscores.setText("High Score Color phun: 0");
                 //System.out.println(userInfos);
-//                Log.d("myTag",  userInfos.toString());
+                Log.d("myTag",  userInfos.toString());
             }
+            @Override
             public void onCancelled(DatabaseError databaseError) {
                 Log.d("myTag", "The read failed: " + databaseError.getCode());
                 System.out.println("The read failed: " + databaseError.getCode());
-                //Toast.makeText(this, "Ereur de fetch...", Toast.LENGTH_LONG).show();
+                // [START_EXCLUDE]
+                Toast.makeText(PlayerProfileActivity.this, "Failed to load post.",
+                        Toast.LENGTH_SHORT).show();
+                // [END_EXCLUDE]
             }
         });
 
@@ -98,13 +111,13 @@ public class PlayerProfileActivity extends BaseActivity {
     public void logout(){
         mAuth = FirebaseAuth.getInstance();
         mAuth.signOut();
-        //Intent main = new Intent(PlayerProfileActivity.this, LoginActivity.class);
+        Intent main = new Intent(PlayerProfileActivity.this, LoginActivity.class);
         SharedPreferences prefs = getSharedPreferences("LOGIN_PREFS", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("LOGIN_ID", "");
         editor.putString("LOGIN_PWD", "");
-        editor.commit();
-        //startActivity(main);
+        editor.apply();
+        startActivity(main);
     }
 
 

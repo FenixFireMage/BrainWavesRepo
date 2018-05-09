@@ -13,7 +13,7 @@ import android.widget.Button;
 import com.bignerdranch.android.brainwaves.ListOfGamesActivity;
 import com.bignerdranch.android.brainwaves.R;
 
-public class MyActivity extends Activity {
+public class MathQuizActivity extends Activity {
     //Create all the private button fields
     private Button helpButton;
     private Button playButton;
@@ -98,7 +98,7 @@ public class MyActivity extends Activity {
     }
     @Override
     public void onBackPressed() {
-        Intent main = new Intent(MyActivity.this, ListOfGamesActivity.class);
+        Intent main = new Intent(MathQuizActivity.this, ListOfGamesActivity.class);
         startActivity(main);
     }
 }

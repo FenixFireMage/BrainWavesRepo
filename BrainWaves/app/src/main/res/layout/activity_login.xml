@@ -21,7 +21,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="10dp"
             android:layout_weight="0.03"
-            android:src="@drawable/blue_brain_waves" />
+            android:src="@drawable/blue_brain_waves"
+            android:contentDescription="TODO" />
 
         <!--  Email Label -->
         <android.support.design.widget.TextInputLayout

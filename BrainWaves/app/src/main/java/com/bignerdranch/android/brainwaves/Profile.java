@@ -23,8 +23,8 @@ public class Profile extends AppCompatActivity {
 
     String PlayerName,PlayerEmailText,AdressText;
     int AgePlayerText;
-    private FirebaseAuth firebaseAuth;
-    DatabaseReference ref;
+//    private FirebaseAuth firebaseAuth;
+//    DatabaseReference ref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
-       />
+        android:contentDescription="TODO" />
     <!--android:src="@drawable/firebase_lockup_400" />-->
 
     <LinearLayout

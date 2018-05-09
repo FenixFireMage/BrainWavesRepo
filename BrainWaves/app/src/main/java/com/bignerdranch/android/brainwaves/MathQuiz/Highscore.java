@@ -44,7 +44,7 @@ public class Highscore extends Activity {
     }
     @Override
     public void onBackPressed() {
-        Intent main = new Intent(Highscore.this, MyActivity.class);
+        Intent main = new Intent(Highscore.this, MathQuizActivity.class);
         startActivity(main);
     }
 }

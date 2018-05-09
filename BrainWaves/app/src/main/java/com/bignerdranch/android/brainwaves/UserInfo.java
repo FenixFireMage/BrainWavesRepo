@@ -4,27 +4,27 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 
-public class UserInfo extends BaseActivity{
+public class UserInfo {
 
-    public String username;
-    public String email;
+//    public String username;
+//    public String email;
 
-    public String NamePlayer=mUsername;
-    public int AgeOfPlayer=Integer.parseInt(mAge);
-    public String CountryPlayer=mCountry;
-    int year;//=1900;
-    int month;//=06;
-    int day;//=2;
-    public GregorianCalendar bDate= new GregorianCalendar(1980,5,5);
+    public String NamePlayer;//=mUsername;
+    public int AgeOfPlayer;//=Integer.parseInt(mAge);
+    public String CountryPlayer;//=mCountry;
+//    int year;//=1900;
+//    int month;//=06;
+//    int day;//=2;
+    //public GregorianCalendar bDate= new GregorianCalendar(1980,5,5);
 
     public UserInfo() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public UserInfo(String username, String email) {
-        this.username = username;
-        this.email = email;
-    }
+//    public UserInfo(String username, String email) {
+//        this.username = username;
+//        this.email = email;
+//    }
 
     public UserInfo(String Name, int age, String country) {
         NamePlayer = Name;

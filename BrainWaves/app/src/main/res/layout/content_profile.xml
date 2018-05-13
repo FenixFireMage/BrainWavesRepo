@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/birch_background"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.bignerdranch.android.brainwaves.Profile"
     tools:showIn="@layout/activity_profile">
@@ -57,7 +58,7 @@
     <TextView
         android:id="@+id/textView9"
         android:layout_width="193dp"
-        android:layout_height="122dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="116dp"
         android:layout_marginEnd="27dp"
         android:text="@string/brainLevel"
@@ -66,5 +67,18 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView8" />
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="279dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginTop="2dp"
+        android:text="@string/edit"
+        app:layout_constraintBottom_toTopOf="@+id/textView9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

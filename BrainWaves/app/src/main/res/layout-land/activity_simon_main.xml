@@ -11,7 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/circles_bg" />
+        android:src="@drawable/circles_bg"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/textView11"

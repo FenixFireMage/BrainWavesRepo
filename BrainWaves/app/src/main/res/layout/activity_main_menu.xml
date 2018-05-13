@@ -4,20 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/birch_background"
     android:orientation="vertical"
     tools:context="com.bignerdranch.android.brainwaves.MainMenuActivity"
     tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="0.10"
+        android:src="@drawable/blue_brain_waves"
+        app:layout_constraintBottom_toTopOf="@+id/daily_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:contentDescription="TODO" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="49dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/app_name"
         android:textAllCaps="false"
         android:textColor="@android:color/black"
         android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,11 +48,15 @@
         android:id="@+id/play_button"
         android:layout_width="325dp"
         android:layout_height="65dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginEnd="26dp"
         android:layout_marginStart="26dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_teal_green"
+        android:backgroundTintMode="add"
         android:text="@string/play"
         android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.571"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,21 +68,27 @@
         android:layout_height="65dp"
         android:layout_marginEnd="34dp"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/button_teal_green"
+        android:foregroundTintMode="multiply"
         android:text="@string/daily"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="364dp"
         android:layout_height="93dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/play_button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/daily_button">
 
@@ -66,6 +98,7 @@
             android:layout_height="65dp"
             android:layout_marginEnd="9dp"
             android:layout_marginStart="28dp"
+            android:background="@drawable/button_teal_green"
             android:text="@string/profile"
             android:textSize="30sp" />
 
@@ -75,6 +108,7 @@
             android:layout_height="65dp"
             android:layout_marginBottom="56dp"
             android:layout_marginEnd="27dp"
+            android:background="@drawable/button_teal_green"
             android:text="@string/games"
             android:textSize="30sp" />
 

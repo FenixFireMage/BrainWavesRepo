@@ -10,6 +10,8 @@ import android.widget.Button;
 
 import com.bignerdranch.android.brainwaves.ColorPhun.Activities.EasyGameColorPhunActivity;
 import com.bignerdranch.android.brainwaves.MathQuiz.MathQuizActivity;
+import com.bignerdranch.android.brainwaves.ReferenceClasses.MathGame1Activity;
+import com.bignerdranch.android.brainwaves.ReferenceClasses.MathGame2Activity;
 import com.bignerdranch.android.brainwaves.simon.SimonGameActivity;
 import com.bignerdranch.android.brainwaves.simon.SimonMainActivity;
 import com.google.firebase.auth.FirebaseAuth;
@@ -99,9 +101,6 @@ public class ListOfGamesActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-<<<<<<< HEAD
-
-=======
         Game8 = (Button) findViewById(R.id.buttonGame8);
         Game8.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -147,7 +146,6 @@ public class ListOfGamesActivity extends AppCompatActivity {
 //                startActivity(intent);
             }
         });
->>>>>>> Paul
     }
 
     @Override

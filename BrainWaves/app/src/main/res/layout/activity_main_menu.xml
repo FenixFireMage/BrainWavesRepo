@@ -7,8 +7,7 @@
     android:background="@drawable/birch_background"
     android:orientation="vertical"
     tools:context="com.bignerdranch.android.brainwaves.MainMenuActivity"
-    tools:layout_editor_absoluteY="81dp"
-    android:theme="@style/brainstyle">
+    tools:layout_editor_absoluteY="81dp">
 
     <ImageView
         android:id="@+id/imageView3"
@@ -53,8 +52,7 @@
         android:layout_marginEnd="26dp"
         android:layout_marginStart="26dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/button"
-        android:backgroundTint="@android:color/holo_blue_dark"
+        android:background="@drawable/button_teal_green"
         android:backgroundTintMode="add"
         android:text="@string/play"
         android:textSize="30sp"
@@ -71,9 +69,8 @@
         android:layout_marginEnd="34dp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="18dp"
-        android:background="@drawable/button"
-        android:backgroundTint="@color/progress_green"
-        android:backgroundTintMode="screen"
+        android:background="@drawable/button_teal_green"
+        android:foregroundTintMode="multiply"
         android:text="@string/daily"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,9 +98,7 @@
             android:layout_height="65dp"
             android:layout_marginEnd="9dp"
             android:layout_marginStart="28dp"
-            android:background="@drawable/button"
-            android:backgroundTint="@android:color/darker_gray"
-            android:backgroundTintMode="screen"
+            android:background="@drawable/button_teal_green"
             android:text="@string/profile"
             android:textSize="30sp" />
 
@@ -113,9 +108,7 @@
             android:layout_height="65dp"
             android:layout_marginBottom="56dp"
             android:layout_marginEnd="27dp"
-            android:background="@drawable/button"
-            android:backgroundTint="@color/darkred"
-            android:backgroundTintMode="multiply"
+            android:background="@drawable/button_teal_green"
             android:text="@string/games"
             android:textSize="30sp" />
 

@@ -1,4 +1,4 @@
-package com.bignerdranch.android.brainwaves;
+package com.bignerdranch.android.brainwaves.ReferenceClasses;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,20 +8,23 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class MathGame0Activity extends AppCompatActivity {
+import com.bignerdranch.android.brainwaves.EndOfMathGame1Activity;
+import com.bignerdranch.android.brainwaves.R;
+
+public class MathGame1Activity extends AppCompatActivity {
     private EditText mUser;
     private Button mNextButton;
     private TextView mQuestionTextView;
     private int mUserLevel = 10;
     private int mNumberOfQuestions= 10;
-    private MathQuestionGenerator0 mProblemBank = new MathQuestionGenerator0(mNumberOfQuestions, mUserLevel);
+    private MathQuestionGenerator1 mProblemBank = new MathQuestionGenerator1(mNumberOfQuestions, mUserLevel);
     private  int mCurrentIndex = 0;
 
 
         @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_math_game0);
+        setContentView(R.layout.activity_math_game1);
 
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
         updateQuestion();
@@ -30,15 +33,12 @@ public class MathGame0Activity extends AppCompatActivity {
         mNextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               //int mUserAnswer = Integer.parseInt(mUser.getText().toString());
+               // mUserAnswer = Integer.parseInt(mUser.getText().toString());
                 mCurrentIndex = (mCurrentIndex + 1);
-
-
-
                 if(mCurrentIndex < mNumberOfQuestions) {
                     updateQuestion();
                 }else{
-                    Intent intent = new Intent(MathGame0Activity.this, EndOfGameActivity.class);
+                    Intent intent = new Intent(MathGame1Activity.this, EndOfMathGame1Activity.class);
                     startActivity(intent);
                 }
             }

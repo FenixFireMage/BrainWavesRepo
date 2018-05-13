@@ -12,14 +12,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
-<<<<<<< HEAD
-import com.bignerdranch.android.brainwaves.simon.SimonGameActivity;
-
-import java.util.Calendar;
-import java.util.Random;
-
-public class MainMenuActivity extends Activity {
-=======
+import com.bignerdranch.android.brainwaves.ColorPhun.Activities.EasyGameColorPhunActivity;
 import com.bignerdranch.android.brainwaves.MathQuiz.MathQuizActivity;
 import com.bignerdranch.android.brainwaves.simon.SimonGameActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -48,12 +41,10 @@ import static com.google.android.gms.common.internal.safeparcel.SafeParcelable.N
 
 public class MainMenuActivity extends BaseActivity {
     private static final String TAG = "MainMenu";
->>>>>>> Paul
     private Button mProfile;
     private Button mListOfGames;
     private Button mDaily;
     private Button mPlay;
-    private int randomInt;
 
 //    private int randomInt;
 
@@ -90,26 +81,7 @@ public class MainMenuActivity extends BaseActivity {
             public void onClick(View view) {
                 //Start ListOfGamesActivity
                 Random random = new Random();
-<<<<<<< HEAD
-                randomInt = random.nextInt(3) + 1;
-                Intent intent;
-                if(randomInt == 1)
-                {
-                    intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
-                }
-                else if(randomInt == 2)
-                {
-                    intent = new Intent(MainMenuActivity.this, FlashGame.class);
-                }
-                else
-                {
-                    intent = new Intent(MainMenuActivity.this, SimonGameActivity.class);
-
-                }
-                startActivity(intent);
-=======
                 randomGame(random);
->>>>>>> Paul
             }
         });
         mDaily = findViewById(R.id.daily_button);
@@ -119,26 +91,7 @@ public class MainMenuActivity extends BaseActivity {
                 //Start ListOfGamesActivity
                 int seed = Calendar.DAY_OF_MONTH;
                 Random random = new Random(seed);
-<<<<<<< HEAD
-                randomInt = random.nextInt(3) + 1;
-                if(randomInt == 1)
-                {
-                    Intent intent = new Intent(MainMenuActivity.this, MathGame1Activity.class);
-                    startActivity(intent);
-                }
-                else if(randomInt == 2)
-                {
-                    Intent intent = new Intent(MainMenuActivity.this, FlashGame.class);
-                    startActivity(intent);
-                }
-                else
-                {
-                    Intent intent = new Intent(MainMenuActivity.this, SimonGameActivity.class);
-                    startActivity(intent);
-                }
-=======
                 randomGame(random);
->>>>>>> Paul
             }
         });
         mProfile = findViewById(R.id.profile_button);
@@ -165,16 +118,19 @@ public class MainMenuActivity extends BaseActivity {
     }
 
     private void randomGame(Random random) {
-        int randomInt = random.nextInt(3) + 1;
+        int randomInt = random.nextInt(5) + 1;
         Intent intent;
         if (randomInt == 1) {
             intent = new Intent(MainMenuActivity.this, MathQuizActivity.class);
         } else if (randomInt == 2) {
             intent = new Intent(MainMenuActivity.this, FlashGame.class);
-        } else {
+        } else if(randomInt == 3){
             intent = new Intent(MainMenuActivity.this, SimonGameActivity.class);
-
-        }
+        } else if(randomInt == 4){
+            intent = new Intent(MainMenuActivity.this, LogicGame1.class);
+        } else {
+        intent = new Intent(MainMenuActivity.this, EasyGameColorPhunActivity.class);
+    }
         startActivity(intent);
     }
 

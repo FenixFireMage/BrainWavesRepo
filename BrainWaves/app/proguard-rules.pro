@@ -29,7 +29,8 @@
 # This rule will properly ProGuard all the model classes in
 # the package com.yourcompany.models. Modify to fit the structure
 # of your app.
--keepclassmembers class com.yourcompany.models.** {
+-keepclassmembers class com.bignerdranch.android.brainwaves.models.** {
   *;
 }
 -keep class com.bignerdranch.android.brainwaves.** { *; }
+-keep class !com.bignerdranch.android.brainwaves.ReferenceClasses.**, com.bignerdranch.android.brainwaves.** { *; }

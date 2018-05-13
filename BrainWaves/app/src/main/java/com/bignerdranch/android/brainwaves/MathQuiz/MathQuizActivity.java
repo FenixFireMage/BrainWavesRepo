@@ -27,7 +27,7 @@ public class MathQuizActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my);
+        setContentView(R.layout.activity_quiz_main);
 
         final Animation animTranslate = AnimationUtils.loadAnimation(this,R.anim.anim_translate);
 

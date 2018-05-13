@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<<<<<<< HEAD
-    <color name="colorPrimary">#64ffda</color>
-    <color name="colorPrimaryDark">#00363a</color>
-    <color name="colorAccent">#FF4081</color>
-=======
     <color name="colorPrimary">#6dabcd</color>
     <color name="colorPrimaryDark">#303f9f</color>
     <color name="colorAccent">#ff4081</color>
     <color name="colorPrimaryMed">#3F51B5</color>
 
-
+    <color name="shayneGreen">#00bba4</color>
     <color name="reactionPrimary">#64ffda</color>
     <color name="primary">#3f78e4</color>
     <color name="primary_dark">#003B6F</color>
     <color name="primary_darker">#0F3366</color>
-    <color name="accent">#FFFFFF</color>
+    <color name="accent">#ffffff</color>
     <color name="colorButton">#15bd02</color>
     <color name="black">#000000</color>
     <color name="jet">#222222</color>
@@ -40,5 +35,4 @@
     <color name="grey_100">#F5F5F5</color>
     <color name="grey_300">#E0E0E0</color>
     <color name="grey_500">#9E9E9E</color>
->>>>>>> Paul
 </resources>

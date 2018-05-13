@@ -25,7 +25,7 @@
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
-        android:background="@drawable/button"
+        android:background="@drawable/button_maroon"
         android:text="Start Game"
         android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
         android:layout_alignStart="@+id/instructions"
         android:layout_below="@+id/instructions"
         android:layout_marginTop="27dp"
-        android:background="@drawable/button"
+        android:background="@drawable/button_maroon"
         android:text="High Scores"
         android:textStyle="bold" />
 
@@ -58,7 +58,7 @@
         android:layout_alignStart="@+id/startButton"
         android:layout_below="@+id/startButton"
         android:layout_marginTop="18dp"
-        android:background="@drawable/button"
+        android:background="@drawable/button_maroon"
         android:text="Instructions"
         android:textStyle="bold" />
 

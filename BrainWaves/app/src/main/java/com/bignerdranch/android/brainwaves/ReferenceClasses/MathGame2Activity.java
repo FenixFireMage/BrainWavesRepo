@@ -1,4 +1,4 @@
-package com.bignerdranch.android.brainwaves;
+package com.bignerdranch.android.brainwaves.ReferenceClasses;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,9 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.bignerdranch.android.brainwaves.EndOfMathGame2Activity;
+import com.bignerdranch.android.brainwaves.R;
 
 import static android.content.ContentValues.TAG;
 

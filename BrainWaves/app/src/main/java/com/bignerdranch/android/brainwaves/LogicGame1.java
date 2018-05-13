@@ -27,33 +27,33 @@ public class LogicGame1 extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-//        mTwo = (Button) findViewById(R.id.button3);
-//        mTwo.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //Start ListOfGamesActivity
-//                Intent intent = new Intent(LogicGame1.this, ListOfGamesActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        mThree = (Button) findViewById(R.id.button4);
-//        mThree.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //Start ListOfGamesActivity
-//                Intent intent = new Intent(LogicGame1.this, ListOfGamesActivity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        mFour = (Button) findViewById(R.id.button5);
-//        mFour.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //Start ListOfGamesActivity
-//                Intent intent = new Intent(LogicGame1.this, MainMenuActivity.class);
-//                startActivity(intent);
-//            }
-//        });
+        mTwo = (Button) findViewById(R.id.button3);
+        mTwo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(LogicGame1.this, ListOfGamesActivity.class);
+                startActivity(intent);
+            }
+        });
+        mThree = (Button) findViewById(R.id.button4);
+        mThree.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(LogicGame1.this, ListOfGamesActivity.class);
+                startActivity(intent);
+            }
+        });
+        mFour = (Button) findViewById(R.id.button5);
+        mFour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Start ListOfGamesActivity
+                Intent intent = new Intent(LogicGame1.this, MainMenuActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
 }

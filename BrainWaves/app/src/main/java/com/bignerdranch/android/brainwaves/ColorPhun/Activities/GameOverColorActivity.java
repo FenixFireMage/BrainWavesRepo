@@ -77,9 +77,9 @@ public class GameOverColorActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        startActivity(new Intent(GameOverColorActivity.this, ListOfGamesActivity.class));
-    }
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        startActivity(new Intent(GameOverColorActivity.this, ListOfGamesActivity.class));
+//    }
 }

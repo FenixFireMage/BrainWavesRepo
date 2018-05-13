@@ -22,8 +22,101 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.0"
+        android:columnCount="2"
+        android:rowCount="2">
 
+        <ImageButton
+            android:id="@+id/image_red"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+
+            android:layout_rowWeight="1"
+            android:background="@drawable/simon_button_states"
+            android:backgroundTint="#ff0000"
+            android:backgroundTintMode="src_atop"
+            android:scaleType="centerInside"
+            />
+        <!--tools:clickable="true"-->
+        <!--android:focusable="true"-->
+        <!--/>-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/image_green"-->
+        <!--app:layout_constraintRight_toLeftOf="@+id/image_blue"-->
+
+        <!--app:layout_constraintStart_toStartOf="@+id/black_simon_shell"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/black_simon_shell"-->
+
+
+        <ImageButton
+            android:id="@+id/image_blue"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+
+            android:layout_rowWeight="1"
+            android:background="@drawable/simon_button_states"
+            android:backgroundTint="#00ffff"
+            android:backgroundTintMode="src_atop"
+            android:scaleType="centerInside"
+            />
+        <!--tools:clickable="true"-->
+        <!--android:focusable="true"-->
+        <!--/>-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/image_purple"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/black_simon_shell"-->
+
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/image_red"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/image_red"-->
+
+        <!--app:layout_constraintTop_toTopOf="@+id/black_simon_shell"-->
+
+        <ImageButton
+            android:id="@+id/image_green"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+
+            android:layout_rowWeight="1"
+            android:background="@drawable/simon_button_states"
+            android:backgroundTint="#00ff00"
+            android:backgroundTintMode="src_atop"
+            android:scaleType="centerInside"
+            tools:clickable="true"
+            android:focusable="true" />
+        <!--app:layout_constraintHorizontal_bias="0.333"-->
+        <!--app:layout_constraintVertical_bias="0.461"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/black_simon_shell"-->
+        <!--app:layout_constraintLeft_toLeftOf="@+id/black_simon_shell"-->
+
+        <!--app:layout_constraintRight_toLeftOf="@+id/image_purple"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/image_red"-->
+
+
+        <ImageButton
+            android:id="@+id/image_purple"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="5dp"
+
+            android:layout_rowWeight="1"
+            android:background="@drawable/simon_button_states"
+            android:backgroundTint="#966FD6"
+            android:backgroundTintMode="src_atop"
+            android:scaleType="centerInside"
+            tools:clickable="true"
+            android:focusable="true" />
+        <!--app:layout_constraintBottom_toBottomOf="@+id/black_simon_shell"-->
+        <!--app:layout_constraintRight_toLeftOf="@+id/black_simon_shell"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/black_simon_shell"-->
+
+        <!--app:layout_constraintLeft_toRightOf="@+id/image_green"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/image_blue"-->
     </GridLayout>
 
     <TextView
@@ -51,8 +144,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
         android:text="Restart"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,7 +159,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="Main Menu"
-        android:visibility="visible"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_restartGame"
         app:layout_constraintStart_toStartOf="parent" />
@@ -101,8 +194,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:src="@drawable/flash_off"
-            android:contentDescription="TODO" />
+            android:src="@drawable/flash_off" />
 
         <ImageView
             android:id="@+id/imageview_top_right"
@@ -110,8 +202,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:src="@drawable/flash_off"
-            android:contentDescription="TODO" />
+            android:src="@drawable/flash_off" />
 
         <ImageView
             android:id="@+id/imageview_bottom_left"
@@ -119,8 +210,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:src="@drawable/flash_off"
-            android:contentDescription="TODO" />
+            android:src="@drawable/flash_off" />
 
         <ImageView
             android:id="@+id/imageview_bottom_right"
@@ -128,8 +218,7 @@
             android:layout_height="wrap_content"
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
-            android:src="@drawable/flash_off"
-            android:contentDescription="TODO" />
+            android:src="@drawable/flash_off" />
 
     </GridLayout>
 
@@ -149,82 +238,79 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/image_red"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_columnWeight="1"
-        android:layout_margin="5dp"
-        android:layout_marginStart="256dp"
-        android:layout_rowWeight="1"
-        android:background="@drawable/simon_button_states"
-        android:backgroundTint="#ff0000"
-        android:backgroundTintMode="src_atop"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/image_green"
-        app:layout_constraintRight_toLeftOf="@+id/image_blue"
-        app:layout_constraintStart_toStartOf="@+id/black_simon_shell"
-        app:layout_constraintTop_toTopOf="@+id/black_simon_shell"
-        android:contentDescription="TODO" />
+    <!--<ImageButton-->
+        <!--android:id="@+id/image_red"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_columnWeight="1"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:layout_marginStart="256dp"-->
+        <!--android:layout_rowWeight="1"-->
+        <!--android:background="@drawable/simon_button_states"-->
+        <!--android:backgroundTint="#ff0000"-->
+        <!--android:backgroundTintMode="src_atop"-->
+        <!--android:scaleType="centerInside"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/image_green"-->
+        <!--app:layout_constraintRight_toLeftOf="@+id/image_blue"-->
+        <!--app:layout_constraintStart_toStartOf="@+id/black_simon_shell"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/black_simon_shell" />-->
 
-    <ImageButton
-        android:id="@+id/image_purple"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_columnWeight="1"
-        android:layout_margin="5dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_rowWeight="1"
-        android:background="@drawable/simon_button_states"
-        android:backgroundTint="#966FD6"
-        android:backgroundTintMode="src_atop"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/black_simon_shell"
-        app:layout_constraintEnd_toEndOf="@+id/black_simon_shell"
-        app:layout_constraintLeft_toRightOf="@+id/image_green"
-        app:layout_constraintRight_toLeftOf="@+id/black_simon_shell"
-        app:layout_constraintTop_toBottomOf="@+id/image_blue"
-        android:contentDescription="TODO" />
+    <!--<ImageButton-->
+        <!--android:id="@+id/image_purple"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_columnWeight="1"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:layout_marginBottom="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:layout_marginTop="8dp"-->
+        <!--android:layout_rowWeight="1"-->
+        <!--android:background="@drawable/simon_button_states"-->
+        <!--android:backgroundTint="#966FD6"-->
+        <!--android:backgroundTintMode="src_atop"-->
+        <!--android:scaleType="centerInside"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/black_simon_shell"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/black_simon_shell"-->
+        <!--app:layout_constraintLeft_toRightOf="@+id/image_green"-->
+        <!--app:layout_constraintRight_toLeftOf="@+id/black_simon_shell"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/image_blue" />-->
 
-    <ImageButton
-        android:id="@+id/image_blue"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_columnWeight="1"
-        android:layout_margin="5dp"
-        android:layout_rowWeight="1"
-        android:background="@drawable/simon_button_states"
-        android:backgroundTint="#00ffff"
-        android:backgroundTintMode="src_atop"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toTopOf="@+id/image_purple"
-        app:layout_constraintEnd_toEndOf="@+id/black_simon_shell"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/image_red"
-        app:layout_constraintTop_toTopOf="@+id/black_simon_shell"
+    <!--<ImageButton-->
+        <!--android:id="@+id/image_blue"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_columnWeight="1"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:layout_rowWeight="1"-->
+        <!--android:background="@drawable/simon_button_states"-->
+        <!--android:backgroundTint="#00ffff"-->
+        <!--android:backgroundTintMode="src_atop"-->
+        <!--android:scaleType="centerInside"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/image_purple"-->
+        <!--app:layout_constraintEnd_toEndOf="@+id/black_simon_shell"-->
+        <!--app:layout_constraintHorizontal_bias="0.0"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/image_red"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/black_simon_shell"-->
 
-        android:contentDescription="TODO" />
+        <!--/>-->
 
-    <ImageButton
-        android:id="@+id/image_green"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_columnWeight="1"
-        android:layout_margin="5dp"
-        android:layout_marginTop="132dp"
-        android:layout_rowWeight="1"
-        android:background="@drawable/simon_button_states"
-        android:backgroundTint="#00ff00"
-        android:backgroundTintMode="src_atop"
-        android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/black_simon_shell"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintLeft_toLeftOf="@+id/black_simon_shell"
-        app:layout_constraintRight_toLeftOf="@+id/image_purple"
-        app:layout_constraintTop_toBottomOf="@+id/image_red"
-        app:layout_constraintVertical_bias="0.461"
-        android:contentDescription="TODO" />
+    <!--<ImageButton-->
+        <!--android:id="@+id/image_green"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_columnWeight="1"-->
+        <!--android:layout_margin="5dp"-->
+        <!--android:layout_marginTop="132dp"-->
+        <!--android:layout_rowWeight="1"-->
+        <!--android:background="@drawable/simon_button_states"-->
+        <!--android:backgroundTint="#00ff00"-->
+        <!--android:backgroundTintMode="src_atop"-->
+        <!--android:scaleType="centerInside"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/black_simon_shell"-->
+        <!--app:layout_constraintHorizontal_bias="0.333"-->
+        <!--app:layout_constraintLeft_toLeftOf="@+id/black_simon_shell"-->
+        <!--app:layout_constraintRight_toLeftOf="@+id/image_purple"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/image_red"-->
+        <!--app:layout_constraintVertical_bias="0.461" />-->
 
 </android.support.constraint.ConstraintLayout>

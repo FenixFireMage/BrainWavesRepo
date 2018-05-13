@@ -10,6 +10,8 @@ import android.widget.Button;
 
 import com.bignerdranch.android.brainwaves.ColorPhun.Activities.EasyGameColorPhunActivity;
 import com.bignerdranch.android.brainwaves.MathQuiz.MathQuizActivity;
+import com.bignerdranch.android.brainwaves.ReferenceClasses.MathGame1Activity;
+import com.bignerdranch.android.brainwaves.ReferenceClasses.MathGame2Activity;
 import com.bignerdranch.android.brainwaves.simon.SimonGameActivity;
 import com.bignerdranch.android.brainwaves.simon.SimonMainActivity;
 import com.google.firebase.auth.FirebaseAuth;

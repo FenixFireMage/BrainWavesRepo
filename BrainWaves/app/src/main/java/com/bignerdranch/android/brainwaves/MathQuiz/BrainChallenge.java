@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -93,7 +94,9 @@ public class BrainChallenge extends Activity {
         submit.setOnClickListener(new View.OnClickListener() {
             //Onclick button function
             public void onClick(View view) {
-                if (currentNumber < 20) {
+                if(inputText.getText().toString().isEmpty())
+                    inputText.setText("0");
+                if (currentNumber < 5) {
                     if (checkAnswer()) {
                         //showRightAlert();
                         currentNumber++;
@@ -157,6 +160,13 @@ public class BrainChallenge extends Activity {
         number1 = (int) (Math.random() * 15 + 1);
         number2 = (int) (Math.random() * 15 + 1);
         //indexop = (int)Math.random()*operation.size();
+
+        if(number1<number2)
+            number1+=(number2*2+1);
+
+        int tempNum=(number1/number2)*number2;
+        if(number1!=tempNum)
+            number1=tempNum;
 
         if (operation.get(indexop).equals("+")) {
             totalValue = number1 + number2;

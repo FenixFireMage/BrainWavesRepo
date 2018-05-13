@@ -9,7 +9,7 @@
     android:layout_alignParentStart="false"
     android:layout_alignParentTop="false"
     android:fitsSystemWindows="false"
-    tools:context="com.bignerdranch.android.brainwaves.MathGame2Activity">
+    tools:context="com.bignerdranch.android.brainwaves.ReferenceClasses.MathGame2Activity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

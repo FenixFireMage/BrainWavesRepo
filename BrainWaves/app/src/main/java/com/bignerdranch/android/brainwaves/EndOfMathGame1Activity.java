@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.bignerdranch.android.brainwaves.ReferenceClasses.MathGame1Activity;
+
 public class EndOfMathGame1Activity extends AppCompatActivity {
     private Button backButton;
     private Button playAgain;

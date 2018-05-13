@@ -82,7 +82,7 @@ public class PlayerProfileActivity extends BaseActivity {
                 TextView tvscores = (TextView) findViewById(R.id.tvSummaryP);
                 SharedPreferences preferences = getApplicationContext().getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
                 int highScore_phun = preferences.getInt("HIGHSCORE_COLORPHUN", 0);
-                tvscores.setText("High Score Color phun: "+ String.valueOf(highScore_phun));
+                tvscores.setText("High Score Light V Dark: "+ String.valueOf(highScore_phun));
                 Button logout = (Button) findViewById(R.id.btn_logoutProfileplayer);
                 logout.setOnClickListener(new View.OnClickListener() {
                     @Override

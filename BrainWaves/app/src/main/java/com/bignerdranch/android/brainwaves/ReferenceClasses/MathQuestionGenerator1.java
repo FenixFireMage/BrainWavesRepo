@@ -1,4 +1,4 @@
-package com.bignerdranch.android.brainwaves;
+package com.bignerdranch.android.brainwaves.ReferenceClasses;
 
 import android.util.Log;
 import android.widget.Button;

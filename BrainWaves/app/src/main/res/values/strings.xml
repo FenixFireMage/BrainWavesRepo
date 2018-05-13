@@ -30,19 +30,31 @@
     <string name="problem3"> 6 - 2 = </string>
     <string name="problem4"> 6 / 3 = </string>
     //End of math games page
+
     //Game 2: Logic Game 1
     <string name="tap">tap</string>
     <string name="Rotate">\nRotate</string>
-    <string name="logicGame1">Logic Game</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="four">4</string>
+    <string name="three">3</string>
+    <string name="Question">How many sides does\n the shape have?</string>
+    <string name="logicGame1">Logic Game 1</string>
+
     //Game 3: Fast Tap
     <string name="speedText">Tap the screen when it changes color!</string>
     <string name="fastTap">Fast Tap</string>
-    //End of game page
+
     //Profile
     <string name="yourName">Your Name</string>
     <string name="brainLevel">Brain Level: 10</string>
     <string name="age">Age: 21</string>
+    <string name="edit">Edit</string>
+    //ProfileEditor
+    <string name="done">Done</string>
     //End of Profile
+
+    //End of game page
     <string name="title_activity_end_of_game">End of Game</string>
     <string name="end_of_game">Times up!\n Your Score:\n</string>
     <string name="back_Button">Home</string>
@@ -212,6 +224,9 @@
     <string name="title_sign_in">Welcome</string>
     <string name="sign_up">Sign Up</string>
     <string name="PlayerAddress">PlayerAddress</string>
+    <string name="math_quiz_help">The point of this game is to answer the questions and get as many questions right as possible.
+        If you are wrong or right you get instant feedback.
+        You can also give up and enter a blank answer, this will be counted as wrong. Are you ready to take the challenge?</string>
 
     <!--End Login/Database Strings    -->
 

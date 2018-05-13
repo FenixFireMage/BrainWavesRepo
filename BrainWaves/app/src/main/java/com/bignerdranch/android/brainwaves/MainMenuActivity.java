@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 
+import com.bignerdranch.android.brainwaves.ColorPhun.Activities.EasyGameColorPhunActivity;
 import com.bignerdranch.android.brainwaves.MathQuiz.MathQuizActivity;
 import com.bignerdranch.android.brainwaves.simon.SimonGameActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -117,16 +118,19 @@ public class MainMenuActivity extends BaseActivity {
     }
 
     private void randomGame(Random random) {
-        int randomInt = random.nextInt(3) + 1;
+        int randomInt = random.nextInt(5) + 1;
         Intent intent;
         if (randomInt == 1) {
             intent = new Intent(MainMenuActivity.this, MathQuizActivity.class);
         } else if (randomInt == 2) {
             intent = new Intent(MainMenuActivity.this, FlashGame.class);
-        } else {
+        } else if(randomInt == 3){
             intent = new Intent(MainMenuActivity.this, SimonGameActivity.class);
-
-        }
+        } else if(randomInt == 4){
+            intent = new Intent(MainMenuActivity.this, LogicGame1.class);
+        } else {
+        intent = new Intent(MainMenuActivity.this, EasyGameColorPhunActivity.class);
+    }
         startActivity(intent);
     }
 

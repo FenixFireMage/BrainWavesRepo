@@ -81,7 +81,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="24dp"
             android:gravity="center"
-            android:text="No account yet? Create one"
+            android:text="Create account"
             android:textSize="16dip" />
 
         <TextView
@@ -92,7 +92,7 @@
         <TextView
             android:id="@+id/detail"
             style="@style/ThemeOverlay.MyTextDetail"
-            tools:text="Firebase User ID: 123456789abc" />
+            tools:text="User ID: 123456789abc" />
 
     </LinearLayout>
 </ScrollView>

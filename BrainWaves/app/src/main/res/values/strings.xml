@@ -31,6 +31,12 @@
     <string name="problem4"> 6 / 3 = </string>
     //End of math games page
 
+    //Daily Challenge
+    <string name="dailyChallenge">Are you ready to begin the daily challenge?</string>
+    <string name="enter">Enter!</string>
+    <string name="currentScore">Current Score: 0</string>
+
+
     //Game 2: Logic Game 1
     <string name="tap">tap</string>
     <string name="Rotate">\nRotate</string>
@@ -66,7 +72,7 @@
     <string name="title_activity_reaction_game1">ReactionGame1</string>
     <string name="title_activity_profile">Profile</string>
 
-//Simon
+    //Simon
     <string name="aboutActivityMainText">
     </string>
     <string name="soundEffectAttribution">
@@ -227,9 +233,9 @@
     <string name="math_quiz_help">The point of this game is to answer the questions and get as many questions right as possible.
         If you are wrong or right you get instant feedback.
         You can also give up and enter a blank answer, this will be counted as wrong. Are you ready to take the challenge?</string>
+    <string name="title_activity_daily_challenge">DailyChallenge</string>
 
     <!--End Login/Database Strings    -->
-
 
 
 </resources>

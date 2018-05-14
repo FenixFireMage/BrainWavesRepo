@@ -87,6 +87,8 @@ public class PlayerProfileActivity extends BaseActivity {
                 int flash_score = preferences.getInt("HIGHSCORE_FLASH",0);
                 int simon_score = preferences.getInt("SIMON",0);
                 int logic_score = preferences.getInt("LOGIC",0);
+
+
                 int brainwavefreq = logic_score+math_score+flash_score+high_fast+simon_score;
                 tvscores.setText("High Score Light V Dark: "+ String.valueOf(highScore_phun)
                 +"\nHigh Score Logic: " + logic_score

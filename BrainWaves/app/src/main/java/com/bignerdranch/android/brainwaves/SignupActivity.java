@@ -2,7 +2,9 @@ package com.bignerdranch.android.brainwaves;
 
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.util.Log;
@@ -126,6 +128,12 @@ public class SignupActivity extends BaseActivity {
         main.putExtra("user_nom", nom);
         main.putExtra("user_country",country);
         main.putExtra("user_age",age);
+        SharedPreferences preferences = this.getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putString("name", nom);
+            editor.putString("country", country);
+            editor.putInt("age", age);
+
         startActivity(main);
     }
 

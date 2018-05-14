@@ -69,7 +69,7 @@ public class LogicGame1 extends AppCompatActivity {
     public void generateQuestion(int answer){
 
 
-        if(rightAnswer==answer){
+        if(rightAnswer==answer && level<6){
             score++;
         }
         level++;

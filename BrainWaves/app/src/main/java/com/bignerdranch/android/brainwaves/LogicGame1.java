@@ -74,7 +74,7 @@ public class LogicGame1 extends AppCompatActivity {
         }
         level++;
 
-        if(level<=5) {
+        if(level<=6) {
             final TextView CurrScore = findViewById(R.id.logicScore);
             CurrScore.setText("Score:" + score);
 

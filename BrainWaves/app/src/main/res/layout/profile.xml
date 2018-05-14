@@ -86,7 +86,7 @@
             android:ellipsize="end"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:lines="6"
+            android:lines="9"
             android:text="HighScore"
             android:textColor="@color/black"
             android:textSize="14sp" />

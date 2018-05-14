@@ -1,6 +1,8 @@
 package com.bignerdranch.android.brainwaves.simon;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.os.AsyncTask;
@@ -55,13 +57,17 @@ public class SimonGameActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simon_game);
 
+
+//        final TextView simonHighScore =findViewById(R.id.simonHighScoreView);
+//        simonHighScore.setVisibility(View.INVISIBLE);
+
         Log.i(TAG_GAME_ACTIVITY, "onCreate");
         //setup variables
         soundsLoaded = new SparseIntArray();
         sequence = new LinkedList<>();
         playerSequence = new LinkedList<>();
         rand = new Random();
-        maxScore = SimonMainActivity.maxScore;
+//        maxScore = SimonMainActivity.maxScore;
 
         // setup the sound stuff b/c this is cool
         setupSoundPool();
@@ -290,14 +296,38 @@ public class SimonGameActivity extends Activity {
     private void endGame() {
         SimonMakeToast.toast(getApplicationContext(), "Game Over... score: " + (score));
 
-        if (score > maxScore){
-            maxScore = score; //exclude last elem in sequence since they failed that one
+//        if (score > maxScore){
+//            maxScore = score; //exclude last elem in sequence since they failed that one
+
+//        simonHighScore.setVisibility(View.VISIBLE);
+        maxScore = saveAndGetHighScore();
+//        simonHighScore.setText("High Score!  "+maxScore);
+
             SimonMainActivity.saveScore(getApplicationContext(), maxScore);
-        }
+//        }
+
+
+
         sequence.clear();
         toggleMenuButtons();
         toggleMainButtons();
         inGame = false;
+    }
+
+
+    private int saveAndGetHighScore() {
+        SharedPreferences preferences = getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
+
+        int points=score;
+        int highScore = preferences.getInt("HIGHSCORE_SIMON", 0);
+
+        if (points > highScore) {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("HIGHSCORE_SIMON", points);
+            editor.apply();
+            highScore = points;
+        }
+        return highScore;
     }
 
     //toggles between enabled and disabled on main Simon buttons
@@ -313,8 +343,8 @@ public class SimonGameActivity extends Activity {
     private void toggleMenuButtons(){
         Button btn = findViewById(R.id.button_restartGame);
         btn.setVisibility(btn.getVisibility() == View.VISIBLE ? View.INVISIBLE : View.VISIBLE);
-        btn = findViewById(R.id.button_toMenu);
-        btn.setVisibility(btn.getVisibility() == View.VISIBLE ? View.INVISIBLE : View.VISIBLE);
+//        btn = findViewById(R.id.button_toMenu);
+//        btn.setVisibility(btn.getVisibility() == View.VISIBLE ? View.INVISIBLE : View.VISIBLE);
     }
 
     // turn on or off the start button of the game activity

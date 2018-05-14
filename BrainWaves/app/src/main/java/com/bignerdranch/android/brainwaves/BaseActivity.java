@@ -162,7 +162,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                             Log.w(TAG, "signInAnonymously:failure", task.getException());
                             Toast.makeText(getApplicationContext(), "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            updateUI(null);
+//                            updateUI(null);
                             onSignupFailed();
                         }
                         new android.os.Handler().postDelayed(new Runnable() {public void run() {onSignupSuccess();mProgressDialog.dismiss();}}, 3000);
@@ -216,6 +216,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                     }
                 });
 
+
         //if the user is not logged in that means current user will return null
 //        if (user == null) {
 //            Toast.makeText(this, "No user connected...", Toast.LENGTH_LONG).show();
@@ -264,11 +265,13 @@ public abstract class BaseActivity extends AppCompatActivity {
                             Log.d(TAG, "linkWithCredential:success");
                             FirebaseUser user = task.getResult().getUser();
 //                            updateUI(user);
+                            onSignupSuccess();
                         } else {
                             Log.w(TAG, "linkWithCredential:failure", task.getException());
                             Toast.makeText(getApplicationContext(), "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
 //                            updateUI(null);
+                            onSignupFailed();
                         }
 
                         // [START_EXCLUDE]

@@ -29,7 +29,8 @@
             android:fontFamily="sans-serif"
             android:text="@string/ProfileName"
             android:textColor="@android:color/black"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/tvPEmail"
@@ -56,7 +57,8 @@
             android:fontFamily="sans-serif-light"
             android:text="@string/ProfileAge"
             android:textColor="@color/black"
-            android:textSize="16sp" />
+            android:textSize="24sp"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/tvAddressP"
@@ -68,17 +70,63 @@
             android:fontFamily="sans-serif-light"
             android:text="@string/PlayerAddress"
             android:textColor="@color/black"
-            android:textSize="22sp" />
+            android:textSize="22sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvBrainLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAgeP"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/brainLevel"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView8"
+            app:layout_constraintTop_toBottomOf="@+id/button" />
 
         <Space
             android:id="@+id/spaceHolder"
             android:layout_width="10dp"
             android:layout_height="0dp"
-            android:layout_below="@id/tvAddressP"
+            android:layout_below="@id/tvBrainLevel"
             android:layout_centerHorizontal="true" />
 
         <TextView
-            android:id="@+id/tvSummaryP"
+            android:id="@+id/tvFlash"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvLightVsDark"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:lines="2"
+            android:text="Flash HighScore"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvMathQuiz"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvFlash"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:lines="2"
+            android:text="Math HighScore"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvLightVsDark"
             android:layout_width="310dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/btn_logoutProfileplayer"
@@ -87,7 +135,21 @@
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
             android:lines="2"
-            android:text="HighScore"
+            android:text="LvD HighScore"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvSimon"
+            android:layout_width="310dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvMathQuiz"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            android:lines="2"
+            android:text="Simon HighScore"
             android:textColor="@color/black"
             android:textSize="14sp" />
 
@@ -105,6 +167,14 @@
             android:text="Logout"
             android:textColor="@android:color/white"
             android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/editProfileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/edit" />
     </RelativeLayout>
 
     <include

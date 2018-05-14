@@ -230,6 +230,15 @@
 
     <!--End Login/Database Strings    -->
 
-
+    <!--<string name="title_activity_end_of_game">End of Game</string>-->
+    <!--<string name="end_of_game">Times up!\n Your Score:\n</string>-->
+    <!--<string name="back_Button">Home</string>-->
+    <!--<string name="play_again">Play Again</string>-->
+    <!--<string name="play_next">Play Next</string>-->
+    <!--<string name="score">SCORE NEEDED</string>-->
+    <!--<string name="title_activity_logic_game1">LogicGame1</string>-->
+    <!--<string name="title_activity_speed_game1">SpeedGame1</string>-->
+    <!--<string name="title_activity_profile">Profile</string>-->
+    <string name="title_activity_profile_editor">ProfileEditor</string>
 
 </resources>

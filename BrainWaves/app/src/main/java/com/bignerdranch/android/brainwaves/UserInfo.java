@@ -10,12 +10,12 @@ public class UserInfo {
 //    public String email;
 
     public String NamePlayer;//=mUsername;
-    public int AgeOfPlayer;//=Integer.parseInt(mAge);
+    public int AgeOfPlayer,BrainLevelPlayer;//=Integer.parseInt(mAge);
     public String CountryPlayer;//=mCountry;
 //    int year;//=1900;
 //    int month;//=06;
 //    int day;//=2;
-    //public GregorianCalendar bDate= new GregorianCalendar(1980,5,5);
+    //public GregorianCalendar born= new GregorianCalendar(1980,5,5);
 
     public UserInfo() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
@@ -30,6 +30,7 @@ public class UserInfo {
         NamePlayer = Name;
         AgeOfPlayer = age;
         CountryPlayer = country;
+        BrainLevelPlayer = 1;
     }
 
     public String DisplayNamePlayer() {
@@ -37,6 +38,9 @@ public class UserInfo {
     }
     public int DisplayAgePlayer() {
         return AgeOfPlayer;
+    }
+    public int DisplayBrainLevelPlayer() {
+        return BrainLevelPlayer;
     }
     public String DisplayCountryPlayer() {
         return CountryPlayer;
@@ -59,6 +63,7 @@ public class UserInfo {
                 "NamePlayer='" + NamePlayer + '\'' +
                 ", AgeOfPlayer=" + AgeOfPlayer +
                 ", CountryPlayer='" + CountryPlayer + '\'' +
+                ", BrainLevelOfPlayer='" + BrainLevelPlayer + '\'' +
                 '}';
     }
 }

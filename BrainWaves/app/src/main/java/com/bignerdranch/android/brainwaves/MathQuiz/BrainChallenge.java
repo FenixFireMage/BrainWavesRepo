@@ -91,12 +91,15 @@ public class BrainChallenge extends Activity {
         runningTotal = new ArrayList();
 //        boolean hello = mathString();
         newProblem();
+
         submit.setOnClickListener(new View.OnClickListener() {
             //Onclick button function
             public void onClick(View view) {
                 if(inputText.getText().toString().isEmpty())
                     inputText.setText("0");
-                if (currentNumber < 5) {
+
+                if (currentNumber < 6) {
+
                     if (checkAnswer()) {
                         //showRightAlert();
                         currentNumber++;
@@ -105,7 +108,7 @@ public class BrainChallenge extends Activity {
                         inputText.setText("");
                         titleText.setText("Question " + currentNumber);
                         rightText.setText("Number Right: " + right);
-                        newProblem();
+//                        newProblem();
 
                     } else {
                         //showWrongAlert();
@@ -114,8 +117,21 @@ public class BrainChallenge extends Activity {
                         titleText.setText("Question " + currentNumber);
                         wrongText.setText("Number Wrong: " + wrong);
                         inputText.setText("");
+//                        newProblem();
+                    }
+                    if (currentNumber < 6){
                         newProblem();
+                    }else {
+                        //String myWrong = wrong+ "";
+                        //String myRight = right + "";
 
+                        scoreIntent = new Intent(getApplicationContext(), ScoreScreen.class);
+                        Bundle extras = new Bundle();
+                        extras.putString("myRightMessage", Integer.toString(right));
+                        extras.putString("myWrongMessage", Integer.toString(wrong));
+                        scoreIntent.putExtras(extras);
+
+                        startActivity(scoreIntent);
                     }
                 } else {
                     //String myWrong = wrong+ "";
@@ -133,7 +149,6 @@ public class BrainChallenge extends Activity {
         });
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

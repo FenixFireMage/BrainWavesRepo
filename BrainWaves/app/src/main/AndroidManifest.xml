@@ -92,7 +92,7 @@
 
         <activity
             android:name=".SignupActivity"
-            android:theme="@style/AppTheme.Dark" />
+            android:theme="@style/AppTheme" />
  <!--       <activity
             android:name=".Splashscreen"
             android:label="@string/title_activity_main"
@@ -116,6 +116,10 @@
         <activity
             android:name=".PlayerProfileActivity"
             android:theme="@style/AppTheme.Dark" />
+        <activity
+            android:name=".ProfileEditor"
+            android:label="@string/title_activity_profile_editor"
+            android:theme="@style/AppTheme.NoActionBar"/>
 <!--        <activity
             android:name=".ConcentrationAppMenuActivity"
             android:theme="@style/AppTheme.Dark" />-->

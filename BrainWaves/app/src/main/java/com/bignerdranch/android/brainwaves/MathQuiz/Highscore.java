@@ -1,6 +1,7 @@
 package com.bignerdranch.android.brainwaves.MathQuiz;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import com.bignerdranch.android.brainwaves.R;
 
 
 public class Highscore extends Activity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

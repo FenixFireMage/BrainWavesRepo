@@ -16,6 +16,7 @@ public class LogicGame1 extends AppCompatActivity {
     public int score = 0;
     int level = 1;
    //public enum answers{1,2,3,4};
+    int norepeat=0;
     public int rightAnswer=-1;
     private Button mOne;
     private Button mTwo;
@@ -79,6 +80,11 @@ public class LogicGame1 extends AppCompatActivity {
 
         Random r = new Random();
         rightAnswer = r.nextInt(4)+1;
+        if(rightAnswer==norepeat)
+        {
+            rightAnswer=(rightAnswer+1)%4;
+        }
+        norepeat=rightAnswer;
 
         switch(rightAnswer) {
             case 1: shape.setImageResource(R.drawable.shape3);

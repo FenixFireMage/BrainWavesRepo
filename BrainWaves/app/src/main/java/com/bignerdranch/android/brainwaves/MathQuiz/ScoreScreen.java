@@ -26,7 +26,7 @@ public class ScoreScreen extends Activity {
 
     private String rightMessage;
     private String wrongMessage;
-    int points, highScore;
+    int highScore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,8 +49,6 @@ public class ScoreScreen extends Activity {
         rightText.setText(rightPoints);
         wrongText.setText(wrongPoints);
 
-        points = Integer.parseInt(rightMessage);
-
 //        SharedPreferences sharedPref = this.getSharedPreferences("MathScore",MODE_PRIVATE);
 //        int myvalue = sharedPref.getInt("score", 0);
 //
@@ -61,7 +59,7 @@ public class ScoreScreen extends Activity {
 //            editor.apply();
 //        }
         TextView textView = findViewById(R.id.textView12);
-        highScore = saveAndGetHighScore();
+        highScore = saveAndGetHighScore(Integer.parseInt(rightMessage));
         textView.setText("High Score!"+highScore);
 
         homeIntent = new Intent(this,MathQuizActivity.class);
@@ -85,7 +83,7 @@ public class ScoreScreen extends Activity {
     }
 
 
-    private int saveAndGetHighScore() {
+    private int saveAndGetHighScore(int points) {
         SharedPreferences preferences = this.getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
 
         int highScore = preferences.getInt("MathScore", 0);

@@ -89,9 +89,8 @@ public class MainMenuActivity extends BaseActivity {
             @Override
             public void onClick(View view) {
                 //Start ListOfGamesActivity
-                int seed = Calendar.DAY_OF_MONTH;
-                Random random = new Random(seed);
-                randomGame(random);
+                Intent intent = new Intent(MainMenuActivity.this, DailyChallenge.class);
+                startActivity(intent);
             }
         });
         mProfile = findViewById(R.id.profile_button);

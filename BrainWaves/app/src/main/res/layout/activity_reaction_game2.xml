@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/reactionPrimary"
-    tools:context="com.bignerdranch.android.brainwaves.ReactionGame2"
-    android:theme="@style/brainstyle">
+    android:background="@drawable/birch_background"
+    tools:context="com.bignerdranch.android.brainwaves.ReactionGame2">
 
     <TextView
         android:id="@+id/timeLeft"
+        android:textColor="@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -23,12 +23,14 @@
 
     <Button
         android:id="@+id/button"
+        android:background="@drawable/button_teal_green"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:onClick="counter"
+        android:textColor="@color/black"
         android:text="TAP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,6 +50,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:text="Score:"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/timeLeft"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

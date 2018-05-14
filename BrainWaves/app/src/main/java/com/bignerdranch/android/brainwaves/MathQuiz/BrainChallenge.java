@@ -48,6 +48,7 @@ public class BrainChallenge extends Activity {
     private String myTextIsCool;
     private List<String> operation;
     private int indexop;
+    CounterClass timer = new CounterClass(30000, 1000);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,9 +84,10 @@ public class BrainChallenge extends Activity {
         currentNumber = 1;
         titleText.setText("Question " + currentNumber);
 
-        timers.setText("00:02:00");
+//        timers.setText("00:02:00");
+        timers.setText("30");
         // A timer of 60 seconds to play for, with an interval of 1 second (1000 milliseconds)
-        CounterClass timer = new CounterClass(60000, 1000);
+//        CounterClass timer = new CounterClass(60000, 1000);
         timer.start();
 
         runningTotal = new ArrayList();
@@ -122,8 +124,6 @@ public class BrainChallenge extends Activity {
                     if (currentNumber < 6){
                         newProblem();
                     }else {
-                        //String myWrong = wrong+ "";
-                        //String myRight = right + "";
 
                         scoreIntent = new Intent(getApplicationContext(), ScoreScreen.class);
                         Bundle extras = new Bundle();
@@ -136,6 +136,24 @@ public class BrainChallenge extends Activity {
                 } else {
                     //String myWrong = wrong+ "";
                     //String myRight = right + "";
+
+                    if (checkAnswer()) {
+                        //showRightAlert();
+                        currentNumber++;
+//                        showRightAlert();
+                        right++;
+                        inputText.setText("");
+                        titleText.setText("Question " + currentNumber);
+                        rightText.setText("Number Right: " + right);
+
+                    } else {
+                        //showWrongAlert();
+                        wrong++;
+                        currentNumber++;
+                        titleText.setText("Question " + currentNumber);
+                        wrongText.setText("Number Wrong: " + wrong);
+                        inputText.setText("");
+                    }
 
                     scoreIntent = new Intent(getApplicationContext(), ScoreScreen.class);
                     Bundle extras = new Bundle();
@@ -172,24 +190,35 @@ public class BrainChallenge extends Activity {
     private void newProblem() {
         Random rand = new Random();
         indexop = rand.nextInt(operation.size());
-        number1 = (int) (Math.random() * 15 + 1);
-        number2 = (int) (Math.random() * 15 + 1);
+//        number1 = (int) (Math.random() * 15 + 1);
+//        number2 = (int) (Math.random() * 15 + 1);
         //indexop = (int)Math.random()*operation.size();
+        number1 = (rand.nextInt(12)+1);
+        number2 = (rand.nextInt(12)+1);
 
-        if(number1<number2)
-            number1+=(number2*2+1);
+//        if(number1<number2)
+//            number1+=(number2*2+1);
+//if(timer.isFinished())
+//{
+        //   currentNumber = 5;
+//}
 
-        int tempNum=(number1/number2)*number2;
-        if(number1!=tempNum)
-            number1=tempNum;
+//        int tempNum=(number1/number2)*number2;
+//        if(number1!=tempNum)
+//            number1=tempNum;
 
         if (operation.get(indexop).equals("+")) {
             totalValue = number1 + number2;
         } else if (operation.get(indexop).equals("-")) {
+            while(number1<number2) {
+                number1 = (rand.nextInt(13));
+                number2 = (rand.nextInt(13));
+            }
             totalValue = number1 - number2;
         } else if (operation.get(indexop).equals("*")) {
             totalValue = number1 * number2;
         } else {
+            number1 = number2 * (rand.nextInt(4)+1);
             totalValue = number1 / number2;
         }
 
@@ -282,11 +311,12 @@ public class BrainChallenge extends Activity {
         @Override
         public void onTick(long millisUntilFinished) {
             long millis = millisUntilFinished;
-            String hms = String.format("%02d:%02d:%02d",
-                    TimeUnit.MILLISECONDS.toHours(millis),
-                    TimeUnit.MILLISECONDS.toMinutes(millis)
-                            - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS
-                            .toHours(millis)),
+//            String hms = String.format("%02d:%02d:%02d",
+                    String hms = String.format("%02d",
+//                    TimeUnit.MILLISECONDS.toHours(millis),
+//                    TimeUnit.MILLISECONDS.toMinutes(millis)
+//                            - TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS
+//                            .toHours(millis)),
                     TimeUnit.MILLISECONDS.toSeconds(millis)
                             - TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS
                             .toMinutes(millis)));
@@ -299,7 +329,12 @@ public class BrainChallenge extends Activity {
         @Override
         public void onFinish() {
             timers.setText("Time is up");
+            currentNumber = 5;
 
+        }
+        public boolean isFinished() {
+
+            return true;
         }
     }
     @Override

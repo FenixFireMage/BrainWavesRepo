@@ -2,7 +2,10 @@ package com.bignerdranch.android.brainwaves;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
+import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -36,6 +39,7 @@ public class FlashGame extends AppCompatActivity {
 
     boolean isRed = false;
     Random rand = new Random();
+
     private int score = 0;
 
     @Override
@@ -43,6 +47,7 @@ public class FlashGame extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flash_game);
+
         final MediaPlayer redSound = MediaPlayer.create(this, R.raw.horn);
         final MediaPlayer greenSound = MediaPlayer.create(this, R.raw.green);
         final TextView TimerField = findViewById(R.id.textView);
@@ -55,7 +60,7 @@ public class FlashGame extends AppCompatActivity {
         new CountDownTimer(30000, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                int timeLeft = (int) millisUntilFinished / 1000;
+                int timeLeft = (int)millisUntilFinished / 1000;
                 TimerField.setText("Seconds remaining: " + timeLeft);
                 CurrScore.setText("SCORE:    " + score);
 
@@ -84,17 +89,16 @@ public class FlashGame extends AppCompatActivity {
                 flashB.setVisibility(View.GONE);
                 TimerField.setText("Game Over");
                 flashHighScore.setVisibility(View.VISIBLE);
-                highScore = saveAndGetHighScore();
+                highScore = saveAndGetHighScore(score);
                 flashHighScore.setText("High Score!  "+highScore);
             }
 
         }.start();
     }
 
-    private int saveAndGetHighScore() {
+    private int saveAndGetHighScore(int points) {
         SharedPreferences preferences = getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
 
-        points=score;
         int highScore = preferences.getInt("HIGHSCORE_FLASH", 0);
 
         if (points > highScore) {
@@ -112,9 +116,9 @@ public class FlashGame extends AppCompatActivity {
             isRed = false;
             greenSound.start();
             setActivityBackgroundColor(Color.GREEN);
-            score += 100;
+            score += 10;
         } else {
-            score -= 100;
+            score -= 10;
         }
 
     }

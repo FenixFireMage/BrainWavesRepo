@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -15,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
@@ -22,7 +24,6 @@ import java.util.Objects;
 
 public class PlayerProfileActivity extends BaseActivity {
 
-    private Button mEdit;
     String PlayerName,PlayerEmailText,AdressText;
     int AgePlayerText,brainLevelPlayerText;
 //    private FirebaseAuth mAuth;
@@ -75,43 +76,51 @@ public class PlayerProfileActivity extends BaseActivity {
                 tvmail.setVisibility(View.VISIBLE);
                 tvmail.setText(PlayerEmailText);
 
-//                TextView tvCountry = (TextView) findViewById(R.id.tvAddressP);
-//                tvCountry.setVisibility(View.VISIBLE);
-//                tvCountry.setText(AdressText);
+                TextView tvCountry = (TextView) findViewById(R.id.tvAddressP);
+                tvCountry.setVisibility(View.VISIBLE);
+                tvCountry.setText(AdressText);
 
                 TextView tvAge = (TextView) findViewById(R.id.tvAgeP);
 //                tvAge.setText(String.valueOf(AgePlayerText));
                 tvAge.setText("Age: " + String.valueOf(AgePlayerText));
 
 
-                TextView tvBrainLev = (TextView) findViewById(R.id.tvBrainLevel);
-                tvBrainLev.setText("Brain Level: " + String.valueOf(brainLevelPlayerText));
+//                TextView tvBrainLev = (TextView) findViewById(R.id.tvBrainLevel);
+//                tvBrainLev.setText("Brain Level: " + String.valueOf(brainLevelPlayerText));
 
-                TextView tvFlashscores = (TextView) findViewById(R.id.tvFlash);
                 SharedPreferences preferences = getApplicationContext().getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
-                int highScore_flash = preferences.getInt("HIGHSCORE_FLASH", 0);
-                tvFlashscores.setText("High Score Flash: " + String.valueOf(highScore_flash));
-//                tvscores.setText("High Score Light V Dark: "+ String.valueOf(highScore_phun));
-
-                TextView tvSimonScores = (TextView) findViewById(R.id.tvSimon);
-//                SharedPreferences preferences = getApplicationContext().getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
-                int highScore_simon = preferences.getInt("HIGHSCORE_SIMON", 0);
-                tvSimonScores.setText("High Score Simon: " + String.valueOf(highScore_simon));
-//                tvscores.setText("High Score Light V Dark: "+ String.valueOf(highScore_phun));
 
 
-
-                TextView tvMathscores = (TextView) findViewById(R.id.tvMathQuiz);
-//                SharedPreferences preferences = getApplicationContext().getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
-                int highScore_math = preferences.getInt("MathScore", 0);
-                tvMathscores.setText("High Score Math Quiz: " + String.valueOf(highScore_math));
-//                tvscores.setText("High Score Light V Dark: "+ String.valueOf(highScore_phun));
-
-                TextView tvLvDscores = (TextView) findViewById(R.id.tvLightVsDark);
-//                SharedPreferences preferences = getApplicationContext().getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
                 int highScore_LvD = preferences.getInt("HIGHSCORE_COLORPHUN", 0);
-                tvLvDscores.setText("High Score Light V Dark: " + String.valueOf(highScore_LvD));
-//                tvscores.setText("High Score Light V Dark: "+ String.valueOf(highScore_phun));
+                int high_fast = preferences.getInt("HIGHSCORE_FAST_TAP",0);
+                int math_score = preferences.getInt("MathScore",0);
+                int flash_score = preferences.getInt("HIGHSCORE_FLASH",0);
+                int simon_score = preferences.getInt("HIGHSCORE_SIMON",0);
+                int logic_score = preferences.getInt("LOGIC",0);
+
+//                TextView tvFlashscores = (TextView) findViewById(R.id.tvFlash);
+//                tvFlashscores.setText("High Score Flash: " + String.valueOf(flash_score));
+//
+//                TextView tvSimonScores = (TextView) findViewById(R.id.tvSimon);
+//                tvSimonScores.setText("High Score Simon: " + String.valueOf(simon_score));
+//
+//                TextView tvMathscores = (TextView) findViewById(R.id.tvMathQuiz);
+//                tvMathscores.setText("High Score Math Quiz: " + String.valueOf(math_score));
+//
+//                TextView tvLvDscores = (TextView) findViewById(R.id.tvLightVsDark);
+//                tvLvDscores.setText("High Score Light V Dark: " + String.valueOf(highScore_LvD));
+
+                TextView tvscores = (TextView) findViewById(R.id.tvSummaryP);
+
+                int brainwavefreq = logic_score+math_score+flash_score+high_fast+simon_score;
+                tvscores.setText("High Score Light V Dark: "+ String.valueOf(highScore_LvD)
+                        +"\nHigh Score Logic: " + logic_score
+                        + "\nHigh Score Math: " + math_score
+                        + "\nHigh Score Flash: " + + flash_score
+                        + "\nHigh Score Fast Tap: " + high_fast
+                        + "\nHigh Score Simon: " + simon_score
+                        + "\n\nBrainWave Frequency:" + brainwavefreq);
+
 
                 Button mEdit = (Button) findViewById(R.id.editProfileButton);
                 mEdit.setOnClickListener(new View.OnClickListener() {

@@ -1,6 +1,7 @@
 package com.bignerdranch.android.brainwaves.MathQuiz;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -46,15 +47,7 @@ public class ScoreScreen extends Activity {
         rightText.setText(rightPoints);
         wrongText.setText(wrongPoints);
 
-        SharedPreferences sharedPref = this.getSharedPreferences("MathScore",MODE_PRIVATE);
-        int myvalue = sharedPref.getInt("score", 0);
-
-        if(myvalue < Integer.parseInt(rightMessage))
-        {
-            SharedPreferences.Editor editor = sharedPref.edit();
-            editor.putInt("score", Integer.parseInt(rightMessage));
-            editor.apply();
-        }
+        saveAndGetHighScore(Integer.parseInt(rightMessage));
 
 
 
@@ -101,5 +94,18 @@ public class ScoreScreen extends Activity {
     public void onBackPressed() {
         Intent main = new Intent(ScoreScreen.this, MathQuizActivity.class);
         startActivity(main);
+    }
+
+    private void saveAndGetHighScore(int finalScore) {
+        SharedPreferences preferences = this.getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
+
+        int highScore = preferences.getInt("MATH", 0);
+
+        if (finalScore > highScore) {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("MATH", finalScore);
+            editor.apply();
+        }
+
     }
 }

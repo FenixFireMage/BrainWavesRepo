@@ -82,7 +82,19 @@ public class PlayerProfileActivity extends BaseActivity {
                 TextView tvscores = (TextView) findViewById(R.id.tvSummaryP);
                 SharedPreferences preferences = getApplicationContext().getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
                 int highScore_phun = preferences.getInt("HIGHSCORE_COLORPHUN", 0);
-                tvscores.setText("High Score Light V Dark: "+ String.valueOf(highScore_phun));
+                int high_fast = preferences.getInt("HIGHSCORE_FAST_TAP",0);
+                int math_score = preferences.getInt("MATH",0);
+                int flash_score = preferences.getInt("HIGHSCORE_FLASH",0);
+                int simon_score = preferences.getInt("SIMON",0);
+                int logic_score = preferences.getInt("LOGIC",0);
+
+                tvscores.setText("High Score Light V Dark: "+ String.valueOf(highScore_phun)
+                +"\nHigh Score Logic: " + logic_score
+                + "\nHigh Score Math: " + math_score
+                + "\nHigh Score Flash: " + + flash_score
+                + "\nHigh Score Fast Tap: " + high_fast
+                + "\nHigh Score Simon: " + simon_score);
+
                 Button logout = (Button) findViewById(R.id.btn_logoutProfileplayer);
                 logout.setOnClickListener(new View.OnClickListener() {
                     @Override

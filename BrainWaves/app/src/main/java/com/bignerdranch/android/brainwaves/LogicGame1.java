@@ -1,6 +1,8 @@
 package com.bignerdranch.android.brainwaves;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -72,30 +74,58 @@ public class LogicGame1 extends AppCompatActivity {
         }
         level++;
 
+        if(level<=5) {
+            final TextView CurrScore = findViewById(R.id.logicScore);
+            CurrScore.setText("Score:" + score);
+
+            ImageView shape = findViewById(R.id.shape);
+            //CurrScore.setText(rightAnswer + "Score:" + score);
+
+            Random r = new Random();
+            rightAnswer = r.nextInt(4) + 1;
+            if (rightAnswer == norepeat) {
+                rightAnswer = (rightAnswer + 1) % 4;
+            }
+            norepeat = rightAnswer;
+
+            switch (rightAnswer) {
+                case 1:
+                    shape.setImageResource(R.drawable.shape3);
+                    break;
+                case 2:
+                    shape.setImageResource(R.drawable.shape4);
+                    break;
+                case 3:
+                    shape.setImageResource(R.drawable.shape5);
+                    break;
+                case 4:
+                    shape.setImageResource(R.drawable.shape6);
+                    break;
+            }
+        }
+        else{
+
+            endLogic(score);
+        }
+    }
+
+    public void endLogic(int score){
         final TextView CurrScore = findViewById(R.id.logicScore);
-        CurrScore.setText("Score:"+score);
+        CurrScore.setText("Final Score:"+score);
+        saveAndGetHighScore(score);
+    }
+    private void saveAndGetHighScore(int finalScore) {
+        SharedPreferences preferences = this.getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
 
-        ImageView shape = findViewById(R.id.shape);
-        //CurrScore.setText(rightAnswer + "Score:" + score);
+        int highScore = preferences.getInt("LOGIC", 0);
 
-        Random r = new Random();
-        rightAnswer = r.nextInt(4)+1;
-        if(rightAnswer==norepeat)
-        {
-            rightAnswer=(rightAnswer+1)%4;
+        if (finalScore > highScore) {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("LOGIC", finalScore);
+            editor.apply();
+
         }
-        norepeat=rightAnswer;
 
-        switch(rightAnswer) {
-            case 1: shape.setImageResource(R.drawable.shape3);
-            break;
-            case 2: shape.setImageResource(R.drawable.shape4);
-            break;
-            case 3: shape.setImageResource(R.drawable.shape5);
-            break;
-            case 4: shape.setImageResource(R.drawable.shape6);
-            break;
-        }
     }
 
 }

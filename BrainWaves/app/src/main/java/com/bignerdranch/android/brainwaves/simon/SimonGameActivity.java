@@ -1,6 +1,8 @@
 package com.bignerdranch.android.brainwaves.simon;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.media.AudioAttributes;
 import android.media.SoundPool;
 import android.os.AsyncTask;
@@ -294,6 +296,7 @@ public class SimonGameActivity extends Activity {
             maxScore = score; //exclude last elem in sequence since they failed that one
             SimonMainActivity.saveScore(getApplicationContext(), maxScore);
         }
+        saveAndGetHighScore(score);
         sequence.clear();
         toggleMenuButtons();
         toggleMainButtons();
@@ -464,6 +467,21 @@ public class SimonGameActivity extends Activity {
                 }
             }
         }
+    }
+
+    private void saveAndGetHighScore(int finalScore) {
+        SharedPreferences preferences = this.getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
+
+        int highScore = preferences.getInt("SIMON", 0);
+
+        if (finalScore > highScore) {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("SIMON", finalScore);
+            editor.apply();
+
+        }
+
+
     }
 
 

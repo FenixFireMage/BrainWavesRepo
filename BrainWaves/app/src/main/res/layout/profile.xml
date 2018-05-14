@@ -80,13 +80,13 @@
         <TextView
             android:id="@+id/tvSummaryP"
             android:layout_width="310dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btn_logoutProfileplayer"
+            android:layout_height="300dp"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:ellipsize="end"
             android:fontFamily="sans-serif-medium"
             android:gravity="center"
-            android:lines="2"
+            android:lines="6"
             android:text="HighScore"
             android:textColor="@color/black"
             android:textSize="14sp" />

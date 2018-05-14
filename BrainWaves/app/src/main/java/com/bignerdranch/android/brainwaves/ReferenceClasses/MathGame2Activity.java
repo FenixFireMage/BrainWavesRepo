@@ -1,6 +1,8 @@
 package com.bignerdranch.android.brainwaves.ReferenceClasses;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -83,6 +85,7 @@ public class MathGame2Activity extends AppCompatActivity {
     }
     private void updateQuestion(){
         mQuestionTextView.setText(mProblemBank.getQuestion(mCurrentIndex));
+
     }
 
 

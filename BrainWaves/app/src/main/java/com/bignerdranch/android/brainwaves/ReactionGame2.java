@@ -1,5 +1,7 @@
 package com.bignerdranch.android.brainwaves;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -30,7 +32,7 @@ public class ReactionGame2 extends AppCompatActivity {
             }
 
             public void onFinish() {
-
+                saveAndGetHighScore(clickcount);
                 currTime.setText("Game Over");
             }
 
@@ -42,6 +44,22 @@ public class ReactionGame2 extends AppCompatActivity {
         clickcount++;
 
         showValue.setText("Score:" + clickcount);
+
+    }
+
+
+    private void saveAndGetHighScore(int score) {
+        SharedPreferences preferences = this.getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
+
+        int highScore = preferences.getInt("HIGHSCORE_FAST_TAP", 0);
+
+        if (score > highScore) {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("HIGHSCORE_FAST_TAP", score);
+            editor.apply();
+            highScore = score;
+        }
+
 
     }
 }

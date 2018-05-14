@@ -1,5 +1,7 @@
 package com.bignerdranch.android.brainwaves;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -65,9 +67,12 @@ public class FlashGame extends AppCompatActivity {
                 isRed=false;
                 CurrScore.setText("FINAL SCORE:   " + score);
                 TimerField.setText("Game Over");
+                saveAndGetHighScore(score);
+
             }
 
         }.start();
+
     }
 
     public void onFlash(View view){
@@ -77,11 +82,11 @@ public class FlashGame extends AppCompatActivity {
             isRed=false;
             greenSound.start();
             setActivityBackgroundColor( Color.GREEN);
-            score+=100;
+            score+=10;
         }
         else
         {
-            score-=100;
+            score-=10;
         }
 
    }
@@ -98,5 +103,18 @@ public class FlashGame extends AppCompatActivity {
     public void setActivityBackgroundColor(int color) {
         View view = this.getWindow().getDecorView();
         view.setBackgroundColor(color);
+    }
+
+    private void saveAndGetHighScore(int points) {
+        SharedPreferences preferences = this.getSharedPreferences( "MyPrefs", Context.MODE_PRIVATE);
+
+        int highScore = preferences.getInt("HIGHSCORE_FLASH", 0);
+
+        if (points > highScore) {
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putInt("HIGHSCORE_FLASH", points);
+            editor.apply();
+        }
+
     }
 }
